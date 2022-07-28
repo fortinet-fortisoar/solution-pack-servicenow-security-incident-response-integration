@@ -1,0 +1,1110 @@
+{
+    "@context": "\/api\/3\/contexts\/StagingModelMetadata",
+    "@id": "\/api\/3\/staging_model_metadatas\/49734de5-bfca-4b0e-918d-a803c478e86f",
+    "@type": "StagingModelMetadata",
+    "type": "security_incidents",
+    "parentType": null,
+    "tableName": "security_incident",
+    "ownable": true,
+    "userOwnable": true,
+    "queueable": true,
+    "trackable": true,
+    "taggable": true,
+    "peerReplicable": false,
+    "defaultSort": [],
+    "uniqueConstraint": [
+        {
+            "security_incidents_unique": {
+                "columns": [
+                    "sourceID"
+                ]
+            }
+        }
+    ],
+    "indexable": true,
+    "writable": true,
+    "attributes": [
+        {
+            "@id": "\/api\/3\/attribute_metadatas\/397b9211-5efb-4abf-8aa1-964b23b08ae6",
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "affectedUser",
+            "length": null,
+            "orderIndex": 16,
+            "formType": "text",
+            "dataSource": null,
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "uuid": "397b9211-5efb-4abf-8aa1-964b23b08ae6",
+            "displayName": "{{ affectedUser }}",
+            "descriptions": {
+                "singular": "Affected User"
+            }
+        },
+        {
+            "@id": "\/api\/3\/attribute_metadatas\/dddd0c23-1374-47ab-8c34-e48e95bc976f",
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "riskScore",
+            "length": null,
+            "orderIndex": 2,
+            "formType": "text",
+            "dataSource": null,
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "uuid": "dddd0c23-1374-47ab-8c34-e48e95bc976f",
+            "displayName": "{{ riskScore }}",
+            "descriptions": {
+                "singular": "Risk Score"
+            }
+        },
+        {
+            "@id": "\/api\/3\/attribute_metadatas\/e0f7e1e9-291a-4ea1-93e1-ec8242639082",
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "assignmentGroup",
+            "length": null,
+            "orderIndex": 1,
+            "formType": "text",
+            "dataSource": null,
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "uuid": "e0f7e1e9-291a-4ea1-93e1-ec8242639082",
+            "displayName": "{{ assignmentGroup }}",
+            "descriptions": {
+                "singular": "Assignment Group"
+            }
+        },
+        {
+            "@id": "\/api\/3\/attribute_metadatas\/c3b6dcd6-11b4-477e-9ffe-7cf8bbc3b258",
+            "@type": "AttributeMetadata",
+            "type": "picklists",
+            "name": "phase",
+            "length": null,
+            "orderIndex": 5,
+            "formType": "picklist",
+            "dataSource": {
+                "model": "picklists",
+                "query": {
+                    "logic": "AND",
+                    "filters": [
+                        {
+                            "field": "listName__name",
+                            "operator": "eq",
+                            "value": "IncidentPhase"
+                        }
+                    ],
+                    "sort": [
+                        {
+                            "field": "orderIndex",
+                            "direction": "ASC"
+                        }
+                    ]
+                },
+                "displayConditions": {
+                    "10b77cd3-0ba5-4c2e-83bb-d665430a9287": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "37f637f0-2e7a-41cc-a6e4-502d7263b2d0": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "bb740542-f699-11e7-8c3f-9a214cf093ae": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "bb7407e0-f699-11e7-8c3f-9a214cf093ae": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "bb740a06-f699-11e7-8c3f-9a214cf093ae": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "bb740d30-f699-11e7-8c3f-9a214cf093ae": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "cbaa92d2-6fd7-4dbe-88f6-0e0d17e8b430": {
+                        "visibility": "visible",
+                        "conditions": null
+                    }
+                }
+            },
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": true,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": true,
+                "minlength": 0,
+                "maxlength": 10485761
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "\/api\/3\/picklists\/bb740542-f699-11e7-8c3f-9a214cf093ae",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "uuid": "c3b6dcd6-11b4-477e-9ffe-7cf8bbc3b258",
+            "displayName": "{{ phase }}",
+            "descriptions": {
+                "singular": "Phase"
+            }
+        },
+        {
+            "@id": "\/api\/3\/attribute_metadatas\/62ccbe91-ba86-4b94-a2ad-d8f4a89580b4",
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "sourceID",
+            "length": null,
+            "orderIndex": 6,
+            "formType": "text",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 255
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "uuid": "62ccbe91-ba86-4b94-a2ad-d8f4a89580b4",
+            "displayName": "{{ sourceID }}",
+            "descriptions": {
+                "singular": "Source ID"
+            }
+        },
+        {
+            "@id": "\/api\/3\/attribute_metadatas\/8f6c8ce2-43cd-4253-aa0c-bd842a93a742",
+            "@type": "AttributeMetadata",
+            "type": "picklists",
+            "name": "status",
+            "length": null,
+            "orderIndex": 7,
+            "formType": "picklist",
+            "dataSource": {
+                "model": "picklists",
+                "query": {
+                    "logic": "AND",
+                    "filters": [
+                        {
+                            "field": "listName__name",
+                            "operator": "eq",
+                            "value": "IncidentStatus"
+                        }
+                    ],
+                    "sort": [
+                        {
+                            "field": "orderIndex",
+                            "direction": "ASC"
+                        }
+                    ]
+                },
+                "displayConditions": {
+                    "bb73fade-f699-11e7-8c3f-9a214cf093ae": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "bb73fd5e-f699-11e7-8c3f-9a214cf093ae": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "bb73fe9e-f699-11e7-8c3f-9a214cf093ae": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "bb7402d6-f699-11e7-8c3f-9a214cf093ae": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "bb74042a-f699-11e7-8c3f-9a214cf093ae": {
+                        "visibility": "visible",
+                        "conditions": null
+                    }
+                }
+            },
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": true,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": true,
+                "minlength": 0,
+                "maxlength": 10485761
+            },
+            "bulkAction": {
+                "allow": true,
+                "buttonText": "Change Status",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "\/api\/3\/picklists\/bb73fe9e-f699-11e7-8c3f-9a214cf093ae",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "uuid": "8f6c8ce2-43cd-4253-aa0c-bd842a93a742",
+            "displayName": "{{ status }}",
+            "descriptions": {
+                "singular": "Status"
+            }
+        },
+        {
+            "@id": "\/api\/3\/attribute_metadatas\/307ae374-e57c-4e70-82ac-bd05aa15f1a0",
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "source",
+            "length": null,
+            "orderIndex": 8,
+            "formType": "text",
+            "dataSource": null,
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": true,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 255
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "uuid": "307ae374-e57c-4e70-82ac-bd05aa15f1a0",
+            "displayName": "{{ source }}",
+            "descriptions": {
+                "singular": "Source"
+            }
+        },
+        {
+            "@id": "\/api\/3\/attribute_metadatas\/5696be92-0789-423e-a4e2-a3be1f0fd00f",
+            "@type": "AttributeMetadata",
+            "type": "picklists",
+            "name": "type",
+            "length": null,
+            "orderIndex": 9,
+            "formType": "picklist",
+            "dataSource": {
+                "model": "picklists",
+                "query": {
+                    "logic": "AND",
+                    "filters": [
+                        {
+                            "field": "listName__name",
+                            "operator": "eq",
+                            "value": "IncidentType"
+                        }
+                    ],
+                    "sort": [
+                        {
+                            "field": "orderIndex",
+                            "direction": "ASC"
+                        }
+                    ]
+                },
+                "displayConditions": {
+                    "4e8c71d0-8fba-4313-8b01-ab336cc1af2a": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "590f216a-a582-47b8-9d94-17a066ed234c": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "70321398-f69a-11e7-8c3f-9a214cf093ae": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "70321690-f69a-11e7-8c3f-9a214cf093ae": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "703217da-f69a-11e7-8c3f-9a214cf093ae": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "70321a1e-f69a-11e7-8c3f-9a214cf093ae": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "70321e9c-f69a-11e7-8c3f-9a214cf093ae": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "70321ffa-f69a-11e7-8c3f-9a214cf093ae": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "70322432-f69a-11e7-8c3f-9a214cf093ae": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "7032255e-f69a-11e7-8c3f-9a214cf093ae": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "703218fc-f69a-11e7-8c3f-9a214cf093ae": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "836d97af-6022-42b4-8b0a-1c3cab73a7ea": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "8fea3472-6bd7-4bbf-a080-ca4e778617f8": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "9c50d999-f17f-40ac-8830-b3417893db70": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "bb741514-f699-11e7-8c3f-9a214cf093ae": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "bb7417b2-f699-11e7-8c3f-9a214cf093ae": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "f79c54d8-f69a-11e7-8c3f-9a214cf093ae": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "f79c5618-f69a-11e7-8c3f-9a214cf093ae": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "f79c5744-f69a-11e7-8c3f-9a214cf093ae": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "f79c585c-f69a-11e7-8c3f-9a214cf093ae": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "f79c4b3c-f69a-11e7-8c3f-9a214cf093ae": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "703222e8-f69a-11e7-8c3f-9a214cf093ae": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "f79c5316-f69a-11e7-8c3f-9a214cf093ae": {
+                        "visibility": "visible",
+                        "conditions": null
+                    }
+                }
+            },
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": true,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "\/api\/3\/picklists\/703218fc-f69a-11e7-8c3f-9a214cf093ae",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "uuid": "5696be92-0789-423e-a4e2-a3be1f0fd00f",
+            "displayName": "{{ type }}",
+            "descriptions": {
+                "singular": "Type"
+            }
+        },
+        {
+            "@id": "\/api\/3\/attribute_metadatas\/bfd8e251-ce2e-41e9-b1d2-f881f96e0914",
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "sourceData",
+            "length": null,
+            "orderIndex": 10,
+            "formType": "textarea",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761,
+                "_enableRange": false
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": null,
+            "tooltip": null,
+            "visibility": [
+                {
+                    "sort": [],
+                    "limit": 30,
+                    "logic": "OR",
+                    "filters": [
+                        {
+                            "field": "sourceData",
+                            "operator": "isnull",
+                            "_operator": "isnull",
+                            "value": "false",
+                            "type": "primitive"
+                        }
+                    ]
+                }
+            ],
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "uuid": "bfd8e251-ce2e-41e9-b1d2-f881f96e0914",
+            "displayName": "{{ sourceData }}",
+            "descriptions": {
+                "singular": "Source Data"
+            }
+        },
+        {
+            "@id": "\/api\/3\/attribute_metadatas\/fb5547b9-a432-4dee-b956-3f6b9a6431c8",
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "sourceIP",
+            "length": null,
+            "orderIndex": 11,
+            "formType": "text",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 1024
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": [
+                {
+                    "sort": [],
+                    "limit": 30,
+                    "logic": "OR",
+                    "filters": [
+                        {
+                            "field": "type",
+                            "operator": "eq",
+                            "value": "\/api\/3\/picklists\/703217da-f69a-11e7-8c3f-9a214cf093ae",
+                            "_value": {
+                                "display": "Brute Force Attempts",
+                                "itemValue": "Brute Force Attempts",
+                                "@id": "\/api\/3\/picklists\/703217da-f69a-11e7-8c3f-9a214cf093ae"
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "field": "type",
+                            "operator": "eq",
+                            "value": "\/api\/3\/picklists\/70321a1e-f69a-11e7-8c3f-9a214cf093ae",
+                            "_value": {
+                                "display": "Data Exfiltration",
+                                "itemValue": "Data Exfiltration",
+                                "@id": "\/api\/3\/picklists\/70321a1e-f69a-11e7-8c3f-9a214cf093ae"
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "field": "type",
+                            "operator": "eq",
+                            "value": "\/api\/3\/picklists\/703222e8-f69a-11e7-8c3f-9a214cf093ae",
+                            "_value": {
+                                "display": "Phishing",
+                                "itemValue": "Phishing",
+                                "@id": "\/api\/3\/picklists\/703222e8-f69a-11e7-8c3f-9a214cf093ae"
+                            },
+                            "type": "object"
+                        }
+                    ]
+                }
+            ],
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "uuid": "fb5547b9-a432-4dee-b956-3f6b9a6431c8",
+            "displayName": "{{ sourceIP }}",
+            "descriptions": {
+                "singular": "Source IP"
+            }
+        },
+        {
+            "@id": "\/api\/3\/attribute_metadatas\/ff192393-be56-4e40-94ed-1659dbcb11f7",
+            "@type": "AttributeMetadata",
+            "type": "people",
+            "name": "incidentLead",
+            "length": null,
+            "orderIndex": 12,
+            "formType": "lookup",
+            "dataSource": {
+                "model": "people"
+            },
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": true,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761
+            },
+            "bulkAction": {
+                "allow": true,
+                "buttonText": "Change Lead",
+                "buttonIcon": "fa fa-users",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": null,
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "uuid": "ff192393-be56-4e40-94ed-1659dbcb11f7",
+            "displayName": "{{ incidentLead }}",
+            "descriptions": {
+                "singular": "Incident Lead"
+            }
+        },
+        {
+            "@id": "\/api\/3\/attribute_metadatas\/f44f2081-efae-4291-9096-8958ab2bbe1c",
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "phaseInfographics",
+            "length": null,
+            "orderIndex": 13,
+            "formType": "html",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761,
+                "_enableRange": false
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": [
+                {
+                    "sort": [],
+                    "limit": 30,
+                    "logic": "AND",
+                    "filters": [
+                        {
+                            "field": "phaseInfographics",
+                            "operator": "isnull",
+                            "_operator": "isnull",
+                            "value": "false",
+                            "type": "primitive"
+                        }
+                    ]
+                }
+            ],
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "uuid": "f44f2081-efae-4291-9096-8958ab2bbe1c",
+            "displayName": "{{ phaseInfographics }}",
+            "descriptions": {
+                "singular": "Phase Infographics"
+            }
+        },
+        {
+            "@id": "\/api\/3\/attribute_metadatas\/d7623f76-aadf-4831-890a-b54368785d46",
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "fileHash",
+            "length": null,
+            "orderIndex": 14,
+            "formType": "text",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 1024
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": [
+                {
+                    "sort": [],
+                    "limit": 30,
+                    "logic": "OR",
+                    "filters": [
+                        {
+                            "field": "type",
+                            "operator": "eq",
+                            "value": "\/api\/3\/picklists\/703218fc-f69a-11e7-8c3f-9a214cf093ae",
+                            "_value": {
+                                "display": "Malware",
+                                "itemValue": "Malware",
+                                "@id": "\/api\/3\/picklists\/703218fc-f69a-11e7-8c3f-9a214cf093ae"
+                            },
+                            "type": "object"
+                        },
+                        {
+                            "field": "type",
+                            "operator": "eq",
+                            "value": "\/api\/3\/picklists\/703222e8-f69a-11e7-8c3f-9a214cf093ae",
+                            "_value": {
+                                "display": "Phishing",
+                                "itemValue": "Phishing",
+                                "@id": "\/api\/3\/picklists\/703222e8-f69a-11e7-8c3f-9a214cf093ae"
+                            },
+                            "type": "object"
+                        }
+                    ]
+                }
+            ],
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "uuid": "d7623f76-aadf-4831-890a-b54368785d46",
+            "displayName": "{{ fileHash }}",
+            "descriptions": {
+                "singular": "File Hash"
+            }
+        },
+        {
+            "@id": "\/api\/3\/attribute_metadatas\/2e985b91-64f2-4e71-bd6e-e8ffa8cdda5a",
+            "@type": "AttributeMetadata",
+            "type": "picklists",
+            "name": "severity",
+            "length": null,
+            "orderIndex": 3,
+            "formType": "picklist",
+            "dataSource": {
+                "model": "picklists",
+                "query": {
+                    "logic": "AND",
+                    "filters": [
+                        {
+                            "field": "listName__name",
+                            "operator": "eq",
+                            "value": "Severity"
+                        }
+                    ],
+                    "sort": [
+                        {
+                            "field": "orderIndex",
+                            "direction": "ASC"
+                        }
+                    ]
+                },
+                "displayConditions": {
+                    "0d609b08-45e0-469f-8910-41145c0b7c03": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "40187287-89fc-4e9c-b717-e9443d57eedb": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "58d0753f-f7e4-403b-953c-b0f521eab759": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "7efa2220-39bb-44e4-961f-ac368776e3b0": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "b3c20a3a-ecfd-4adc-a225-0205968e6793": {
+                        "visibility": "visible",
+                        "conditions": null
+                    }
+                }
+            },
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": true,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761
+            },
+            "bulkAction": {
+                "allow": true,
+                "buttonText": "Change Severity",
+                "buttonIcon": "icon icon-edit-03",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": null,
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "uuid": "2e985b91-64f2-4e71-bd6e-e8ffa8cdda5a",
+            "displayName": "{{ severity }}",
+            "descriptions": {
+                "singular": "Severity"
+            }
+        },
+        {
+            "@id": "\/api\/3\/attribute_metadatas\/cc94d12d-29b6-442e-8405-4c9da826d7e7",
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "description",
+            "length": null,
+            "orderIndex": 4,
+            "formType": "richtext",
+            "dataSource": null,
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": null,
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "uuid": "cc94d12d-29b6-442e-8405-4c9da826d7e7",
+            "displayName": "{{ description }}",
+            "descriptions": {
+                "singular": "Description"
+            }
+        },
+        {
+            "@id": "\/api\/3\/attribute_metadatas\/64d1b057-0685-4ccd-a1af-522a103657ef",
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "name",
+            "length": null,
+            "orderIndex": 15,
+            "formType": "text",
+            "dataSource": null,
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": true,
+                "minlength": 0,
+                "maxlength": 1024
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "uuid": "64d1b057-0685-4ccd-a1af-522a103657ef",
+            "displayName": "{{ name }}",
+            "descriptions": {
+                "singular": "Name"
+            }
+        }
+    ],
+    "system": false,
+    "module": "security_incidents",
+    "softDeleteable": false,
+    "archivable": false,
+    "paused": false,
+    "partitionBy": "modifyDate",
+    "archivalCriteria": {
+        "keep_primary_data_for": 24,
+        "delete_primary_data_after": 60
+    },
+    "archivalFilters": [],
+    "uuid": "49734de5-bfca-4b0e-918d-a803c478e86f",
+    "displayName": "{{ name }}",
+    "descriptions": {
+        "plural": "Security Incidents",
+        "singular": "Security Incident"
+    }
+}

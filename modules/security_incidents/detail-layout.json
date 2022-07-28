@@ -1,0 +1,249 @@
+{
+    "@context": "\/api\/3\/contexts\/SystemViewTemplate",
+    "@type": "SystemViewTemplate",
+    "type": "rows",
+    "config": {
+        "rows": [
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "primaryDetail",
+                                "config": {
+                                    "wid": "99329b38-c76a-47aa-b8fb-d96e85a16a06",
+                                    "idField": "id",
+                                    "picklistFieldReadOnly": false,
+                                    "titleFieldReadOnly": false,
+                                    "titleFieldLinky": true,
+                                    "featuredRelationship": {
+                                        "field": null,
+                                        "preText": "Under Investigation In",
+                                        "query": null,
+                                        "statusField": null,
+                                        "sort": []
+                                    },
+                                    "picklistField": "status",
+                                    "titleField": "name"
+                                }
+                            }
+                        ],
+                        "style": "col-lg-12"
+                    }
+                ],
+                "wid": "7da4e5e9-b7e6-4feb-bf3a-d5823d6faff6",
+                "_collapsed": false
+            },
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "editableFormGroup",
+                                "config": {
+                                    "wid": "05bdc88c-fce8-4c5d-9d60-19debbfac2dd",
+                                    "rows": [
+                                        {
+                                            "columns": [
+                                                {
+                                                    "fields": [
+                                                        {
+                                                            "name": "name",
+                                                            "highlightMode": true,
+                                                            "linky": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "description",
+                                                            "highlightMode": true,
+                                                            "linky": true,
+                                                            "readOnly": false
+                                                        }
+                                                    ],
+                                                    "style": "col-lg-12"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "title": "Security Incident Summary"
+                                }
+                            },
+                            {
+                                "type": "editableFormGroup",
+                                "config": {
+                                    "wid": "397a5ffa-1259-4d03-ab36-618feb585dfa",
+                                    "rows": [
+                                        {
+                                            "columns": [
+                                                {
+                                                    "fields": [
+                                                        {
+                                                            "name": "status",
+                                                            "highlightMode": true,
+                                                            "linky": true,
+                                                            "readOnly": true
+                                                        },
+                                                        {
+                                                            "name": "phase",
+                                                            "highlightMode": true,
+                                                            "linky": true,
+                                                            "readOnly": true
+                                                        },
+                                                        {
+                                                            "name": "assignmentGroup",
+                                                            "highlightMode": true,
+                                                            "linky": true,
+                                                            "readOnly": true
+                                                        },
+                                                        {
+                                                            "name": "source",
+                                                            "highlightMode": true,
+                                                            "linky": true,
+                                                            "readOnly": true
+                                                        }
+                                                    ],
+                                                    "style": "col-lg-4"
+                                                },
+                                                {
+                                                    "fields": [
+                                                        {
+                                                            "name": "severity",
+                                                            "highlightMode": true,
+                                                            "linky": true,
+                                                            "readOnly": true
+                                                        },
+                                                        {
+                                                            "name": "type",
+                                                            "highlightMode": true,
+                                                            "linky": true,
+                                                            "readOnly": true
+                                                        },
+                                                        {
+                                                            "name": "affectedUser",
+                                                            "highlightMode": true,
+                                                            "linky": true,
+                                                            "readOnly": true
+                                                        },
+                                                        {
+                                                            "name": "riskScore",
+                                                            "highlightMode": true,
+                                                            "linky": true,
+                                                            "readOnly": true
+                                                        }
+                                                    ],
+                                                    "style": "col-lg-4"
+                                                },
+                                                {
+                                                    "fields": [
+                                                        {
+                                                            "name": "incidentLead",
+                                                            "highlightMode": true,
+                                                            "linky": true,
+                                                            "readOnly": true
+                                                        },
+                                                        {
+                                                            "name": "sourceID",
+                                                            "highlightMode": true,
+                                                            "linky": true,
+                                                            "readOnly": true
+                                                        },
+                                                        {
+                                                            "name": "phaseInfographics",
+                                                            "highlightMode": true,
+                                                            "linky": true,
+                                                            "readOnly": true
+                                                        },
+                                                        {
+                                                            "name": "createUser",
+                                                            "highlightMode": true,
+                                                            "linky": true,
+                                                            "readOnly": true
+                                                        }
+                                                    ],
+                                                    "style": "col-lg-4"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "title": "Security Incident Details"
+                                }
+                            }
+                        ],
+                        "style": "col-lg-12"
+                    }
+                ],
+                "wid": "e21a7b75-7d98-414f-bd33-78a5c389a20b",
+                "_collapsed": false
+            },
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "tabs",
+                                "config": {
+                                    "tabs": [
+                                        {
+                                            "title": "Correlations",
+                                            "widget": {
+                                                "type": "relationship.subtab",
+                                                "config": {
+                                                    "excludes": [
+                                                        "notes",
+                                                        "comments",
+                                                        "userOwners",
+                                                        "attachments"
+                                                    ],
+                                                    "wid": "76735382-e4ad-4ddd-a08d-8deff5785d48"
+                                                }
+                                            },
+                                            "show": true,
+                                            "icon": "fa fa-none"
+                                        },
+                                        {
+                                            "title": "Source Data",
+                                            "active": 0,
+                                            "icon": "icon icon-source-code",
+                                            "widget": {
+                                                "type": "editableFormGroup",
+                                                "config": {
+                                                    "wid": "a2347b89-7211-41eb-bd76-933db382538c",
+                                                    "rows": [
+                                                        {
+                                                            "columns": [
+                                                                {
+                                                                    "fields": [
+                                                                        {
+                                                                            "name": "sourceData",
+                                                                            "highlightMode": true,
+                                                                            "linky": true,
+                                                                            "readOnly": true,
+                                                                            "renderWidget": "json"
+                                                                        }
+                                                                    ]
+                                                                }
+                                                            ]
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            "show": true
+                                        }
+                                    ],
+                                    "wid": "7dbf1de5-50fd-4b8b-8e49-7d89587d34ae"
+                                }
+                            }
+                        ],
+                        "style": "col-lg-12"
+                    }
+                ],
+                "wid": "3a638833-979b-4ff4-b65c-26bc2457f9da",
+                "_collapsed": false
+            }
+        ],
+        "actionButtons": [],
+        "wid": "6487e2f3-4e50-444d-bc15-7d009296ae04",
+        "metadata": []
+    },
+    "uuid": "modules-security_incidents-detail"
+}
