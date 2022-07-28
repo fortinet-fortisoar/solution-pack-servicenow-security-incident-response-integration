@@ -4,11 +4,19 @@
     "type": "solutionpack",
     "local": true,
     "label": "ServiceNow Security Incident Response Integration",
-    "dependencies": [],
+    "dependencies": [
+        {
+            "name": "sOARFramework",
+            "type": "solutionpack",
+            "label": "SOAR Framework",
+            "version": "1.1.0",
+            "minVersion": null
+        }
+    ],
     "prerequisite": null,
     "publisher": "Fortinet",
     "description": "With the ServiceNow Security Incident Response (SIR) module integration Solution pack for FortiSOAR , users can manage the life cycle of your security incidents from initial analysis to containment, eradication, and recovery. Security Incident Response enables you to get a comprehensive understanding of incident response procedures performed by your analysts, and understand trends and bottlenecks in those procedures with analytic-driven dashboards and reporting.",
-    "help": null,
+    "help": "https://github.com/fortinet-fortisoar/solution-pack-servicenow-security-incident-response-integration/blob/release/1.0.0/README.md",
     "category": [
         "IT Service Management"
     ],
