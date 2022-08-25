@@ -13,5 +13,5 @@ You can configure the ServiceNow connector included with this solution pack to i
 
 # Next Steps 
  
-| [Installation](https://github.com/fortinet-fortisoar/solution-pack-gdpr-framework/blob/develop/docs/setup.md#installation) | [Configuration](https://github.com/fortinet-fortisoar/solution-pack-gdpr-framework/blob/develop/docs/setup.md#configuration) | [Usage](https://github.com/fortinet-fortisoar/solution-pack-gdpr-framework/blob/develop/docs/usage.md) | [Contents](https://github.com/fortinet-fortisoar/solution-pack-gdpr-framework/blob/develop/docs/contents.md) |
+| [Installation](https://github.com/fortinet-fortisoar/solution-pack-servicenow-security-incident-response-integration/blob/develop/docs/setup.md#installation) | [Configuration](https://github.com/fortinet-fortisoar/solution-pack-servicenow-security-incident-response-integration/blob/develop/docs/setup.md#configuration) | [Usage](https://github.com/fortinet-fortisoar/solution-pack-servicenow-security-incident-response-integration/blob/develop/docs/usage.md) | [Contents](https://github.com/fortinet-fortisoar/solution-pack-servicenow-security-incident-response-integration/blob/develop/docs/contents.md) |
 |--------------------------------------------|----------------------------------------------|------------------------|------------------------------|

@@ -39,21 +39,6 @@
                         "editMode": false
                     },
                     {
-                        "title": "Security Incidents",
-                        "require": {
-                            "module": "security_incidents",
-                            "action": "read"
-                        },
-                        "state": {
-                            "name": "main.modules.list",
-                            "parameters": {
-                                "module": "security_incidents"
-                            }
-                        },
-                        "icon": "icon icon-increase-indent",
-                        "editMode": false
-                    },
-                    {
                         "title": "Tasks",
                         "require": {
                             "module": "tasks",
@@ -99,6 +84,21 @@
                         "editMode": false
                     },
                     {
+                        "title": "Communications",
+                        "require": {
+                            "module": "communication",
+                            "action": "read"
+                        },
+                        "state": {
+                            "name": "main.modules.list",
+                            "parameters": {
+                                "module": "communication"
+                            }
+                        },
+                        "icon": "icon icon-email-templates",
+                        "editMode": false
+                    },
+                    {
                         "title": "Hunts",
                         "require": {
                             "module": "hunt",
@@ -126,6 +126,36 @@
                             }
                         },
                         "icon": "icon icon-war-room",
+                        "editMode": false
+                    },
+                    {
+                        "title": "Security Incidents",
+                        "require": {
+                            "module": "security_incidents",
+                            "action": "read"
+                        },
+                        "state": {
+                            "name": "main.modules.list",
+                            "parameters": {
+                                "module": "security_incidents"
+                            }
+                        },
+                        "icon": "icon icon-increase-indent",
+                        "editMode": false
+                    },
+                    {
+                        "title": "Emails",
+                        "require": {
+                            "module": "emails",
+                            "action": "read"
+                        },
+                        "state": {
+                            "name": "main.modules.list",
+                            "parameters": {
+                                "module": "emails"
+                            }
+                        },
+                        "icon": "icon icon-send-email",
                         "editMode": false
                     }
                 ],
