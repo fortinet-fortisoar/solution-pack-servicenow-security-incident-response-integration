@@ -38,11 +38,6 @@
                                                                                             {
                                                                                                 "fields": [
                                                                                                     {
-                                                                                                        "name": "name",
-                                                                                                        "highlightMode": true,
-                                                                                                        "readOnly": false
-                                                                                                    },
-                                                                                                    {
                                                                                                         "name": "description",
                                                                                                         "highlightMode": true,
                                                                                                         "readOnly": false
@@ -152,7 +147,7 @@
                                                                                         "title": "Correlations",
                                                                                         "active": 0,
                                                                                         "icon": "fa fa-exchange",
-                                                                                        "show": true,
+                                                                                        "show": false,
                                                                                         "visible": true,
                                                                                         "widget": {
                                                                                             "type": "relationship.subtab",
@@ -218,7 +213,7 @@
                                                                                             }
                                                                                         },
                                                                                         "icon": "icon icon-source-code",
-                                                                                        "show": false,
+                                                                                        "show": true,
                                                                                         "visible": true
                                                                                     },
                                                                                     {
