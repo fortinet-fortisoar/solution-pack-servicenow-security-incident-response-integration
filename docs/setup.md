@@ -14,7 +14,7 @@ The `ServiceNow Security Incident Response Integration` solution pack depends on
 
 | Solution Pack Name                				| Purpose                                |
 |:--------------------------------------------------|:---------------------------------------|
-| ServiceNow Security Incident Response Integration | Required Security Incident modules     |
+| SOAR Framework 1.1.0                              | Require for Incident Response modules  |
 
 # Configuration
 
