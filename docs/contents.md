@@ -17,5 +17,3 @@ The **ServiceNow Security Incident Response Integration** solution pack contains
 
 - Full App Permissions
 
-
->**WARNING:** We recommend that you clone these playbooks before customizing to avoid loss of information while upgrading the solution pack.
