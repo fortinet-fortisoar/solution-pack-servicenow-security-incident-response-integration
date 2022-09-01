@@ -1,0 +1,717 @@
+[
+    {
+        "name": "servicenow",
+        "label": "ServiceNow",
+        "category": "CMDB",
+        "description": "ServiceNow connector provides functionality to create, read, update and delete records of Table and Catalog type",
+        "publisher": null,
+        "operation_roles": [],
+        "configurations": [
+            {
+                "id": 100,
+                "config_id": "ec8bb130-6178-43c8-9deb-003690378a36",
+                "status": 1,
+                "name": "SNOW1",
+                "default": true,
+                "config": {
+                    "password": "password",
+                    "username": "admin",
+                    "server_url": "https:\/\/dev66351.service-now.com\/",
+                    "verify_ssl": false,
+                    "authentication_type": "Basic Authentication"
+                },
+                "remote_status": [],
+                "health_status": [],
+                "connector": 175,
+                "agent": "85732478572eb033b02da62607f2748a",
+                "teams": []
+            },
+            {
+                "id": 101,
+                "config_id": "9bc302f7-bfb6-45f8-aca9-d6b93a29b2dc",
+                "status": 1,
+                "name": "SNOW2",
+                "default": false,
+                "config": {
+                    "password": "password",
+                    "username": "admin",
+                    "server_url": "https:\/\/dev66352.service-now.com\/",
+                    "verify_ssl": false,
+                    "authentication_type": "Basic Authentication"
+                },
+                "remote_status": [],
+                "health_status": [],
+                "connector": 175,
+                "agent": "85732478572eb033b02da62607f2748a",
+                "teams": []
+            }
+        ],
+        "dataImports": [
+            {
+                "id": 37,
+                "name": "Ingestion_servicenow_SNOW_ec8bb130-6178-43c8-9deb-003690378a36",
+                "description": "Metadata for Ingestion_servicenow_SNOW_ec8bb130-6178-43c8-9deb-003690378a36",
+                "status": null,
+                "created_by": "3451141c-bac6-467c-8d72-85e0fab569ce",
+                "modified_by": "3451141c-bac6-467c-8d72-85e0fab569ce",
+                "owners": [],
+                "data_mapping": [],
+                "playbooks": [],
+                "created_at": "2022-08-24T09:29:05.856194Z",
+                "modified_at": "2022-08-24T09:51:18.562406Z",
+                "metadata": {
+                    "scheduleId": "gAAAAABjBfSW09fVxbDdS-tE7jta9abIpUxQ5zx4WFlFGU2XvUIAgo9_W94GYNLfQu85OQ-aJyx47JhN0dmNEaLMrPd2zAfLVw==",
+                    "scheduleName": "Ingestion_servicenow_SNOW_ec8bb130-6178-43c8-9deb-003690378a36",
+                    "scheduleStatus": true
+                },
+                "configuration": "ec8bb130-6178-43c8-9deb-003690378a36",
+                "schedule": null
+            }
+        ],
+        "install_mode": "rpm",
+        "ingestionPlaybooks": {
+            "collections": [
+                {
+                    "@context": "\/api\/3\/contexts\/WorkflowCollection",
+                    "@type": "WorkflowCollection",
+                    "name": "ServiceNow 3.2.0 SNOWIngestion(ec8bb130-6178-43c8-9deb-003690378a36)",
+                    "description": null,
+                    "visible": false,
+                    "workflows": [
+                        {
+                            "@type": "Workflow",
+                            "triggerLimit": null,
+                            "name": "ServiceNow On Incident Update",
+                            "aliasName": null,
+                            "tag": "#servicenow #dataingestion",
+                            "description": null,
+                            "isActive": false,
+                            "debug": false,
+                            "singleRecordExecution": false,
+                            "remoteExecutableFlag": false,
+                            "parameters": [],
+                            "synchronous": false,
+                            "collection": "\/api\/3\/workflow_collections\/ec8bb130-6178-43c8-9deb-003690378a36",
+                            "versions": [],
+                            "triggerStep": "\/api\/3\/workflow_steps\/bd5208bc-35a6-442e-803e-5792c773a05f",
+                            "steps": [
+                                {
+                                    "@type": "WorkflowStep",
+                                    "name": "Get ServiceNow data",
+                                    "description": null,
+                                    "arguments": {
+                                        "incident_details": "{{vars.request.data | replace('\\'', '\\\"') | from_json }}"
+                                    },
+                                    "status": null,
+                                    "top": "100",
+                                    "left": "180",
+                                    "stepType": "\/api\/3\/workflow_step_types\/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+                                    "group": null,
+                                    "uuid": "64ca22ba-5dcc-4354-89fd-f06b6f77ec88"
+                                },
+                                {
+                                    "@type": "WorkflowStep",
+                                    "name": "Get sys id",
+                                    "description": null,
+                                    "arguments": {
+                                        "sys_id": "{{vars.incident_details.sys_id}}"
+                                    },
+                                    "status": null,
+                                    "top": "200",
+                                    "left": "333",
+                                    "stepType": "\/api\/3\/workflow_step_types\/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+                                    "group": null,
+                                    "uuid": "66259266-80e4-4901-959b-bbec4a378448"
+                                },
+                                {
+                                    "@type": "WorkflowStep",
+                                    "name": "Start",
+                                    "description": null,
+                                    "arguments": {
+                                        "route": "deferred\/servicenow_test",
+                                        "step_variables": {
+                                            "input": {
+                                                "params": {
+                                                    "api_body": "{{vars.request.data}}"
+                                                }
+                                            }
+                                        },
+                                        "authentication_methods": [
+                                            "Basic"
+                                        ]
+                                    },
+                                    "status": null,
+                                    "top": "8",
+                                    "left": "20",
+                                    "stepType": "\/api\/3\/workflow_step_types\/df26c7a2-4166-4ca5-91e5-548e24c01b5f",
+                                    "group": null,
+                                    "uuid": "bd5208bc-35a6-442e-803e-5792c773a05f"
+                                },
+                                {
+                                    "@type": "WorkflowStep",
+                                    "name": "Create CyOPs record",
+                                    "description": null,
+                                    "arguments": {
+                                        "for_each": {
+                                            "item": "{{vars.steps.Search_Table_Record.data.result}}",
+                                            "condition": ""
+                                        },
+                                        "arguments": {
+                                            "sourcedata": "{{ vars.item }}"
+                                        },
+                                        "apply_async": false,
+                                        "step_variables": [],
+                                        "workflowReference": "\/api\/3\/workflows\/90ede97e-f3d8-45c9-bf3d-0d2806b2cee2"
+                                    },
+                                    "status": null,
+                                    "top": "400",
+                                    "left": "634",
+                                    "stepType": "\/api\/3\/workflow_step_types\/74932bdc-b8b6-4d24-88c4-1a4dfbc524f3",
+                                    "group": null,
+                                    "uuid": "c6fbab47-094d-4a8b-97ad-83278cc4edea"
+                                },
+                                {
+                                    "@type": "WorkflowStep",
+                                    "name": "Search Table Record",
+                                    "description": null,
+                                    "arguments": {
+                                        "name": "ServiceNow",
+                                        "config": "ec8bb130-6178-43c8-9deb-003690378a36",
+                                        "params": {
+                                            "value": "{{vars.sys_id}}",
+                                            "active": "",
+                                            "table_name": "incident",
+                                            "column_name": "sys_id"
+                                        },
+                                        "version": "3.2.0",
+                                        "connector": "servicenow",
+                                        "operation": "search_record",
+                                        "operationTitle": "Search Table Record",
+                                        "step_variables": []
+                                    },
+                                    "status": null,
+                                    "top": "300",
+                                    "left": "480",
+                                    "stepType": "\/api\/3\/workflow_step_types\/0bfed618-0316-11e7-93ae-92361f002671",
+                                    "group": null,
+                                    "uuid": "ff8d9232-c894-45bc-8dd7-b648670452c0"
+                                }
+                            ],
+                            "routes": [
+                                {
+                                    "@type": "WorkflowRoute",
+                                    "name": "Search Table Record -> Create CyOPs record",
+                                    "targetStep": "\/api\/3\/workflow_steps\/c6fbab47-094d-4a8b-97ad-83278cc4edea",
+                                    "sourceStep": "\/api\/3\/workflow_steps\/ff8d9232-c894-45bc-8dd7-b648670452c0",
+                                    "label": null,
+                                    "isExecuted": false,
+                                    "uuid": "e199203d-3ad5-4dff-b5d3-1959a79fd075"
+                                },
+                                {
+                                    "@type": "WorkflowRoute",
+                                    "name": "Get sys id -> Search Table Record",
+                                    "targetStep": "\/api\/3\/workflow_steps\/ff8d9232-c894-45bc-8dd7-b648670452c0",
+                                    "sourceStep": "\/api\/3\/workflow_steps\/66259266-80e4-4901-959b-bbec4a378448",
+                                    "label": null,
+                                    "isExecuted": false,
+                                    "uuid": "61c7259c-3b45-4e74-ad96-9b9e017b226a"
+                                },
+                                {
+                                    "@type": "WorkflowRoute",
+                                    "name": "Get ServiceNow data -> Get sys id",
+                                    "targetStep": "\/api\/3\/workflow_steps\/66259266-80e4-4901-959b-bbec4a378448",
+                                    "sourceStep": "\/api\/3\/workflow_steps\/64ca22ba-5dcc-4354-89fd-f06b6f77ec88",
+                                    "label": null,
+                                    "isExecuted": false,
+                                    "uuid": "5c8fd25a-4a34-4d15-9b59-0c817f1003ab"
+                                },
+                                {
+                                    "@type": "WorkflowRoute",
+                                    "name": "Start -> Get ServiceNow data",
+                                    "targetStep": "\/api\/3\/workflow_steps\/64ca22ba-5dcc-4354-89fd-f06b6f77ec88",
+                                    "sourceStep": "\/api\/3\/workflow_steps\/bd5208bc-35a6-442e-803e-5792c773a05f",
+                                    "label": null,
+                                    "isExecuted": false,
+                                    "uuid": "9abf86e7-3bed-4fd2-827d-99f45ad50b8b"
+                                }
+                            ],
+                            "groups": [],
+                            "priority": null,
+                            "uuid": "1b4155a1-f19a-4bd5-9ef3-40f200daa627",
+                            "owners": [],
+                            "isPrivate": false,
+                            "deletedAt": null,
+                            "recordTags": [
+                                "dataingestion",
+                                "servicenow"
+                            ]
+                        },
+                        {
+                            "@type": "Workflow",
+                            "triggerLimit": null,
+                            "name": "> ServiceNow > Fetch",
+                            "aliasName": null,
+                            "tag": "#servicenow #dataingestion #fetch",
+                            "description": "Fetches Incidents from ServiceNow",
+                            "isActive": false,
+                            "debug": false,
+                            "singleRecordExecution": false,
+                            "remoteExecutableFlag": false,
+                            "parameters": [],
+                            "synchronous": false,
+                            "collection": "\/api\/3\/workflow_collections\/ec8bb130-6178-43c8-9deb-003690378a36",
+                            "versions": [],
+                            "triggerStep": "\/api\/3\/workflow_steps\/cea85304-607f-42b0-aea3-db633657f048",
+                            "steps": [
+                                {
+                                    "@type": "WorkflowStep",
+                                    "name": "Fetch Incidents",
+                                    "description": null,
+                                    "arguments": {
+                                        "name": "ServiceNow",
+                                        "config": "ec8bb130-6178-43c8-9deb-003690378a36",
+                                        "params": {
+                                            "adv_query": "sysparm_query=sys_created_on>{{vars.last_pull_time}}^sys_created_on<{{vars.curr_timestamp}}&{{vars.advance_search_query}}",
+                                            "table_name": "{{vars.table_name}}",
+                                            "sysparm_limit": "{{vars.limit}}"
+                                        },
+                                        "version": "3.2.0",
+                                        "connector": "servicenow",
+                                        "operation": "advance_search",
+                                        "operationTitle": "Advanced Search",
+                                        "step_variables": []
+                                    },
+                                    "status": null,
+                                    "top": "400",
+                                    "left": "680",
+                                    "stepType": "\/api\/3\/workflow_step_types\/0bfed618-0316-11e7-93ae-92361f002671",
+                                    "group": null,
+                                    "uuid": "52601802-73b9-4cf0-a607-b04105c39d33"
+                                },
+                                {
+                                    "@type": "WorkflowStep",
+                                    "name": "Start",
+                                    "description": null,
+                                    "arguments": {
+                                        "step_variables": {
+                                            "input": {
+                                                "params": []
+                                            },
+                                            "_configuration_schema": "[\n  {\n    \"title\": \"Table Name\",\n    \"name\": \"table_name\",\n    \"type\": \"text\",\n    \"tooltip\": \"The table name.\",\n    \"placeholder\": \"e.g.sn_si_incident\",\n    \"required\": true,\n    \"editable\": true,\n    \"visible\": true,\n    \"value\": \"sn_si_incident\"\n  },\n  {\n    \"title\": \"Advanced Search Query\",\n    \"name\": \"advance_search_query\",\n    \"type\": \"text\",\n    \"tooltip\": \"A generalized query to search for multiple fields in ServiceNow.\",\n    \"required\": false,\n    \"placeholder\": \"e.g. state=Contain\",\n    \"editable\": true,\n    \"visible\": true,\n    \"value\": \"state=Contain\"\n  },\n  {\n    \"title\": \"Limit\",\n    \"name\": \"limit\",\n    \"type\": \"text\",\n    \"tooltip\": \"The number of records to return.\",\n    \"required\": false,\n    \"editable\": true,\n    \"visible\": true,\n    \"value\": \"5\"\n  },\n  {\n    \"title\": \"Pull Sample Incident in Past X Minutes\",\n    \"name\": \"Pull_Sample_Incident_in_Past_X_Minutes\",\n    \"type\": \"text\",\n    \"tooltip\": \"Pull the incidents in the past X minutes. e.g. 14400 minutes are 10 days.\",\n    \"required\": true,\n    \"editable\": true,\n    \"visible\": true,\n    \"value\": 14400\n  }\n]"
+                                        }
+                                    },
+                                    "status": null,
+                                    "top": "20",
+                                    "left": "40",
+                                    "stepType": "\/api\/3\/workflow_step_types\/b348f017-9a94-471f-87f8-ce88b6a7ad62",
+                                    "group": null,
+                                    "uuid": "cea85304-607f-42b0-aea3-db633657f048"
+                                },
+                                {
+                                    "@type": "WorkflowStep",
+                                    "name": "Configuration",
+                                    "description": null,
+                                    "arguments": {
+                                        "limit": "5",
+                                        "table_name": "sn_si_incident",
+                                        "pullTimeMacro": "ServiceNowLastIncidentPullTime_{{vars['audit_info']['cyops_playbook_iri'].split('\/')[-1].replace('-','_')}}",
+                                        "advance_search_query": "state=Contain",
+                                        "Pull_Sample_Incident_in_Past_X_Minutes": "14400"
+                                    },
+                                    "status": null,
+                                    "top": "100",
+                                    "left": "200",
+                                    "stepType": "\/api\/3\/workflow_step_types\/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+                                    "group": null,
+                                    "uuid": "d5be1642-b0f3-47ed-91c7-eb671ce38704"
+                                },
+                                {
+                                    "@type": "WorkflowStep",
+                                    "name": "Set Time Configuration",
+                                    "description": null,
+                                    "arguments": {
+                                        "curr_timestamp": "{{arrow.get( arrow.utcnow().timestamp).strftime('%Y-%m-%d %H:%M:%S')}}",
+                                        "last_pull_time": "{% if (vars.steps.Get_Macro_Value.data[\"hydra:member\"] | length) > 0 %}{{vars.steps.Get_Macro_Value.data['hydra:member'][0].value}}{% else %}{{arrow.get(arrow.utcnow().shift(minutes=-vars.Pull_Sample_Incident_in_Past_X_Minutes).timestamp).strftime('%Y-%m-%d %H:%M:%S')}}{% endif %}"
+                                    },
+                                    "status": null,
+                                    "top": "300",
+                                    "left": "520",
+                                    "stepType": "\/api\/3\/workflow_step_types\/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+                                    "group": null,
+                                    "uuid": "d75011c3-08a9-42f8-b031-c0e39e02e454"
+                                },
+                                {
+                                    "@type": "WorkflowStep",
+                                    "name": "Set Result",
+                                    "description": null,
+                                    "arguments": {
+                                        "data": "{{vars.steps.Fetch_Incidents.data.result}}",
+                                        "macro_name": "{{vars.pullTimeMacro}}",
+                                        "curr_timestamp": "{{vars.curr_timestamp}}"
+                                    },
+                                    "status": null,
+                                    "top": "500",
+                                    "left": "840",
+                                    "stepType": "\/api\/3\/workflow_step_types\/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+                                    "group": null,
+                                    "uuid": "ea8050c2-5ccd-4fee-b1c6-cdc52e97c6bc"
+                                },
+                                {
+                                    "@type": "WorkflowStep",
+                                    "name": "Get Macro Value",
+                                    "description": null,
+                                    "arguments": {
+                                        "params": {
+                                            "iri": "\/api\/wf\/api\/dynamic-variable\/?name={{vars.pullTimeMacro}}",
+                                            "body": "",
+                                            "method": "GET"
+                                        },
+                                        "version": "3.2.1",
+                                        "connector": "cyops_utilities",
+                                        "operation": "make_cyops_request",
+                                        "operationTitle": "FSR: Make FortiSOAR API Call",
+                                        "step_variables": []
+                                    },
+                                    "status": null,
+                                    "top": "200",
+                                    "left": "360",
+                                    "stepType": "\/api\/3\/workflow_step_types\/0109f35d-090b-4a2b-bd8a-94cbc3508562",
+                                    "group": null,
+                                    "uuid": "f2197d8b-d68d-4053-9093-d310f9d189bf"
+                                }
+                            ],
+                            "routes": [
+                                {
+                                    "@type": "WorkflowRoute",
+                                    "name": "Configuration -> Get Macro Value",
+                                    "targetStep": "\/api\/3\/workflow_steps\/f2197d8b-d68d-4053-9093-d310f9d189bf",
+                                    "sourceStep": "\/api\/3\/workflow_steps\/d5be1642-b0f3-47ed-91c7-eb671ce38704",
+                                    "label": null,
+                                    "isExecuted": false,
+                                    "uuid": "e8c3a38d-4146-4211-bb0c-f1c194f6ec9a"
+                                },
+                                {
+                                    "@type": "WorkflowRoute",
+                                    "name": "Search Record -> Set Result",
+                                    "targetStep": "\/api\/3\/workflow_steps\/ea8050c2-5ccd-4fee-b1c6-cdc52e97c6bc",
+                                    "sourceStep": "\/api\/3\/workflow_steps\/52601802-73b9-4cf0-a607-b04105c39d33",
+                                    "label": null,
+                                    "isExecuted": false,
+                                    "uuid": "863b5198-a709-4ad6-b7e0-69551e7ab38c"
+                                },
+                                {
+                                    "@type": "WorkflowRoute",
+                                    "name": "Set Time Configuration -> Fetch Incidents",
+                                    "targetStep": "\/api\/3\/workflow_steps\/52601802-73b9-4cf0-a607-b04105c39d33",
+                                    "sourceStep": "\/api\/3\/workflow_steps\/d75011c3-08a9-42f8-b031-c0e39e02e454",
+                                    "label": null,
+                                    "isExecuted": false,
+                                    "uuid": "6347ca6b-e252-4d96-95aa-91b758b3bd8d"
+                                },
+                                {
+                                    "@type": "WorkflowRoute",
+                                    "name": "Start -> Configuration",
+                                    "targetStep": "\/api\/3\/workflow_steps\/d5be1642-b0f3-47ed-91c7-eb671ce38704",
+                                    "sourceStep": "\/api\/3\/workflow_steps\/cea85304-607f-42b0-aea3-db633657f048",
+                                    "label": null,
+                                    "isExecuted": false,
+                                    "uuid": "ea167f4f-d55f-4b28-b2fd-8ebe582e29ba"
+                                },
+                                {
+                                    "@type": "WorkflowRoute",
+                                    "name": "Get Macro Value -> Set Time Configuration",
+                                    "targetStep": "\/api\/3\/workflow_steps\/d75011c3-08a9-42f8-b031-c0e39e02e454",
+                                    "sourceStep": "\/api\/3\/workflow_steps\/f2197d8b-d68d-4053-9093-d310f9d189bf",
+                                    "label": null,
+                                    "isExecuted": false,
+                                    "uuid": "c0d16ee4-2fed-47c6-b25a-5c7be1eee3cd"
+                                }
+                            ],
+                            "groups": [],
+                            "priority": null,
+                            "uuid": "7a02f942-5f22-48e6-b72b-295f9c339a77",
+                            "owners": [],
+                            "isPrivate": false,
+                            "deletedAt": null,
+                            "recordTags": [
+                                "dataingestion",
+                                "fetch",
+                                "servicenow"
+                            ]
+                        },
+                        {
+                            "@type": "Workflow",
+                            "triggerLimit": null,
+                            "name": "> ServiceNow > Create Incident",
+                            "aliasName": null,
+                            "tag": "#servicenow #dataingestion #create",
+                            "description": "Creates incident in cyops",
+                            "isActive": false,
+                            "debug": false,
+                            "singleRecordExecution": false,
+                            "remoteExecutableFlag": false,
+                            "parameters": [
+                                "sourcedata"
+                            ],
+                            "synchronous": false,
+                            "collection": "\/api\/3\/workflow_collections\/ec8bb130-6178-43c8-9deb-003690378a36",
+                            "versions": [],
+                            "triggerStep": "\/api\/3\/workflow_steps\/be50be95-b247-47ae-8ca2-e17dfae08bae",
+                            "steps": [
+                                {
+                                    "@type": "WorkflowStep",
+                                    "name": "Create Record",
+                                    "description": null,
+                                    "arguments": {
+                                        "resource": {
+                                            "name": "ServiceNow: {{vars.sourcedata.number}}",
+                                            "type": "\/api\/3\/picklists\/703218fc-f69a-11e7-8c3f-9a214cf093ae",
+                                            "phase": "\/api\/3\/picklists\/37f637f0-2e7a-41cc-a6e4-502d7263b2d0",
+                                            "source": "ServiceNow",
+                                            "status": "{{vars.sourcedata.state | resolveRange(vars.incidents_status_map)}}",
+                                            "severity": "{{vars.sourcedata.severity | resolveRange(vars.incidents_severity_map)}}",
+                                            "sourceID": "{{vars.sourcedata.sys_id}}",
+                                            "__replace": "",
+                                            "riskScore": "{{vars.sourcedata.risk_score}}",
+                                            "sourceData": "{{vars.sourcedata | toJSON }}",
+                                            "description": "<p>{{vars.sourcedata.description}}<\/p>\n<p><strong>Short Description<\/strong>:&nbsp;{{vars.sourcedata.short_description}}<\/p>\n<p><strong>Category<\/strong>:&nbsp;{{vars.sourcedata.category}}<\/p>"
+                                        },
+                                        "operation": "Overwrite",
+                                        "collection": "\/api\/3\/security_incidents",
+                                        "__recommend": [],
+                                        "fieldOperation": {
+                                            "recordTags": "Overwrite"
+                                        },
+                                        "step_variables": []
+                                    },
+                                    "status": null,
+                                    "top": "240",
+                                    "left": "400",
+                                    "stepType": "\/api\/3\/workflow_step_types\/2597053c-e718-44b4-8394-4d40fe26d357",
+                                    "group": null,
+                                    "uuid": "7f9a0403-b1be-4200-8b48-a34699d4270a"
+                                },
+                                {
+                                    "@type": "WorkflowStep",
+                                    "name": "Configuration",
+                                    "description": null,
+                                    "arguments": {
+                                        "incidents_status_map": "{'1': {{'IncidentStatus'| picklist('Open')}}, '2': {{'IncidentStatus'| picklist('In Progress')}}, '3': {{'IncidentStatus'| picklist('Awaiting')}}, '6': {{'IncidentStatus'| picklist('Resolved')}}, '7': {{'IncidentStatus'| picklist('Resolved')}}, '8': {{'IncidentStatus'| picklist('Inactive')}}  }",
+                                        "incidents_severity_map": "{'1': {{'Severity'| picklist('High')}}, '2': {{'Severity'| picklist('Medium')}}, '3': {{'Severity'| picklist('Low')}} }"
+                                    },
+                                    "status": null,
+                                    "top": "120",
+                                    "left": "220",
+                                    "stepType": "\/api\/3\/workflow_step_types\/04d0cf46-b6a8-42c4-8683-60a7eaa69e8f",
+                                    "group": null,
+                                    "uuid": "9ee9641c-63e6-4580-b62b-0367785db25b"
+                                },
+                                {
+                                    "@type": "WorkflowStep",
+                                    "name": "Start",
+                                    "description": null,
+                                    "arguments": {
+                                        "step_variables": {
+                                            "input": {
+                                                "params": {
+                                                    "sourcedata": "{{ vars.sourcedata }}"
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "status": null,
+                                    "top": "20",
+                                    "left": "20",
+                                    "stepType": "\/api\/3\/workflow_step_types\/b348f017-9a94-471f-87f8-ce88b6a7ad62",
+                                    "group": null,
+                                    "uuid": "be50be95-b247-47ae-8ca2-e17dfae08bae"
+                                }
+                            ],
+                            "routes": [
+                                {
+                                    "@type": "WorkflowRoute",
+                                    "name": "Start -> Configuration",
+                                    "targetStep": "\/api\/3\/workflow_steps\/9ee9641c-63e6-4580-b62b-0367785db25b",
+                                    "sourceStep": "\/api\/3\/workflow_steps\/be50be95-b247-47ae-8ca2-e17dfae08bae",
+                                    "label": null,
+                                    "isExecuted": false,
+                                    "uuid": "4138766c-d421-408c-8476-f5820749fd8a"
+                                },
+                                {
+                                    "@type": "WorkflowRoute",
+                                    "name": "Configuration -> Create Record",
+                                    "targetStep": "\/api\/3\/workflow_steps\/7f9a0403-b1be-4200-8b48-a34699d4270a",
+                                    "sourceStep": "\/api\/3\/workflow_steps\/9ee9641c-63e6-4580-b62b-0367785db25b",
+                                    "label": null,
+                                    "isExecuted": false,
+                                    "uuid": "2b6e0c1e-d0fa-4cfc-b408-80d8cdee5042"
+                                }
+                            ],
+                            "groups": [],
+                            "priority": null,
+                            "uuid": "90ede97e-f3d8-45c9-bf3d-0d2806b2cee2",
+                            "owners": [],
+                            "isPrivate": false,
+                            "deletedAt": null,
+                            "recordTags": [
+                                "dataingestion",
+                                "create",
+                                "servicenow"
+                            ]
+                        },
+                        {
+                            "@type": "Workflow",
+                            "triggerLimit": null,
+                            "name": "ServiceNow > Ingest",
+                            "aliasName": null,
+                            "tag": "#servicenow #dataingestion #ingest",
+                            "description": "Fetches ServiceNow Incidents",
+                            "isActive": false,
+                            "debug": false,
+                            "singleRecordExecution": false,
+                            "remoteExecutableFlag": false,
+                            "parameters": [],
+                            "synchronous": false,
+                            "collection": "\/api\/3\/workflow_collections\/ec8bb130-6178-43c8-9deb-003690378a36",
+                            "versions": [],
+                            "triggerStep": "\/api\/3\/workflow_steps\/61011533-eb75-4189-9d7a-eeb543e70c9e",
+                            "steps": [
+                                {
+                                    "@type": "WorkflowStep",
+                                    "name": "Fetch Incidents",
+                                    "description": null,
+                                    "arguments": {
+                                        "arguments": [],
+                                        "apply_async": false,
+                                        "step_variables": [],
+                                        "pass_input_record": true,
+                                        "workflowReference": "\/api\/3\/workflows\/7a02f942-5f22-48e6-b72b-295f9c339a77"
+                                    },
+                                    "status": null,
+                                    "top": "120",
+                                    "left": "220",
+                                    "stepType": "\/api\/3\/workflow_step_types\/74932bdc-b8b6-4d24-88c4-1a4dfbc524f3",
+                                    "group": null,
+                                    "uuid": "0ab35ee8-3fd1-43f9-890d-1536c3e3d82e"
+                                },
+                                {
+                                    "@type": "WorkflowStep",
+                                    "name": "Update Last Incident Pull Time",
+                                    "description": null,
+                                    "arguments": {
+                                        "params": {
+                                            "macro": "{{vars.steps.Fetch_Incidents.macro_name}}",
+                                            "value": "{{vars.steps.Fetch_Incidents.curr_timestamp}}"
+                                        },
+                                        "version": "3.2.1",
+                                        "connector": "cyops_utilities",
+                                        "operation": "updatemacro",
+                                        "operationTitle": "CyOPs: Update Macro",
+                                        "step_variables": []
+                                    },
+                                    "status": null,
+                                    "top": "380",
+                                    "left": "620",
+                                    "stepType": "\/api\/3\/workflow_step_types\/0109f35d-090b-4a2b-bd8a-94cbc3508562",
+                                    "group": null,
+                                    "uuid": "0e92d72c-47f9-4611-a982-6729f9aef244"
+                                },
+                                {
+                                    "@type": "WorkflowStep",
+                                    "name": "Start",
+                                    "description": null,
+                                    "arguments": {
+                                        "step_variables": []
+                                    },
+                                    "status": null,
+                                    "top": "11",
+                                    "left": "29",
+                                    "stepType": "\/api\/3\/workflow_step_types\/b348f017-9a94-471f-87f8-ce88b6a7ad62",
+                                    "group": null,
+                                    "uuid": "61011533-eb75-4189-9d7a-eeb543e70c9e"
+                                },
+                                {
+                                    "@type": "WorkflowStep",
+                                    "name": "Create CyOPs record",
+                                    "description": null,
+                                    "arguments": {
+                                        "for_each": {
+                                            "item": "{{ vars.result.data }}",
+                                            "parallel": false,
+                                            "condition": ""
+                                        },
+                                        "arguments": {
+                                            "sourcedata": "{{ vars.item }}"
+                                        },
+                                        "apply_async": false,
+                                        "step_variables": [],
+                                        "pass_input_record": true,
+                                        "workflowReference": "\/api\/3\/workflows\/90ede97e-f3d8-45c9-bf3d-0d2806b2cee2"
+                                    },
+                                    "status": null,
+                                    "top": "250",
+                                    "left": "406",
+                                    "stepType": "\/api\/3\/workflow_step_types\/74932bdc-b8b6-4d24-88c4-1a4dfbc524f3",
+                                    "group": null,
+                                    "uuid": "ac36c014-6485-4c2a-a3c3-e2cc5357324f"
+                                }
+                            ],
+                            "routes": [
+                                {
+                                    "@type": "WorkflowRoute",
+                                    "name": "Fetch incidents -> Create CyOPs record",
+                                    "targetStep": "\/api\/3\/workflow_steps\/ac36c014-6485-4c2a-a3c3-e2cc5357324f",
+                                    "sourceStep": "\/api\/3\/workflow_steps\/0ab35ee8-3fd1-43f9-890d-1536c3e3d82e",
+                                    "label": null,
+                                    "isExecuted": false,
+                                    "uuid": "7826ef24-f592-4d70-aa92-3341a6b0e162"
+                                },
+                                {
+                                    "@type": "WorkflowRoute",
+                                    "name": "Start -> Fetch incidents",
+                                    "targetStep": "\/api\/3\/workflow_steps\/0ab35ee8-3fd1-43f9-890d-1536c3e3d82e",
+                                    "sourceStep": "\/api\/3\/workflow_steps\/61011533-eb75-4189-9d7a-eeb543e70c9e",
+                                    "label": null,
+                                    "isExecuted": false,
+                                    "uuid": "3afe9f3e-b511-4587-b0f9-ec2138ed023a"
+                                },
+                                {
+                                    "@type": "WorkflowRoute",
+                                    "name": "Create CyOPs record -> Update Last Incident Pull Time",
+                                    "targetStep": "\/api\/3\/workflow_steps\/0e92d72c-47f9-4611-a982-6729f9aef244",
+                                    "sourceStep": "\/api\/3\/workflow_steps\/ac36c014-6485-4c2a-a3c3-e2cc5357324f",
+                                    "label": null,
+                                    "isExecuted": false,
+                                    "uuid": "e9a43e6f-6f89-46ed-8249-7203e82f3d1a"
+                                }
+                            ],
+                            "groups": [],
+                            "priority": null,
+                            "uuid": "a9257c4e-e1d1-4bfd-b970-7ece7ed5f38c",
+                            "owners": [],
+                            "isPrivate": false,
+                            "deletedAt": null,
+                            "recordTags": [
+                                "dataingestion",
+                                "ingest",
+                                "servicenow"
+                            ]
+                        }
+                    ],
+                    "image": null,
+                    "uuid": "ec8bb130-6178-43c8-9deb-003690378a36",
+                    "deletedAt": null,
+                    "recordTags": []
+                }
+            ],
+            "exported_tags": [
+                "dataingestion",
+                "servicenow",
+                "fetch",
+                "create",
+                "ingest"
+            ],
+            "globalVariables": []
+        }
+    }
+]

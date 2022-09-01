@@ -1,0 +1,167 @@
+{
+    "@context": "\/api\/3\/contexts\/SystemViewTemplate",
+    "@type": "SystemViewTemplate",
+    "type": "app",
+    "config": {
+        "navigation": [
+            {
+                "title": "Incident Response",
+                "icon": "icon icon-incident-response",
+                "items": [
+                    {
+                        "title": "Alerts",
+                        "require": {
+                            "module": "alerts",
+                            "action": "read"
+                        },
+                        "state": {
+                            "name": "main.modules.list",
+                            "parameters": {
+                                "module": "alerts"
+                            }
+                        },
+                        "icon": "icon icon-alert",
+                        "editMode": false
+                    },
+                    {
+                        "title": "Incidents",
+                        "require": {
+                            "module": "incidents",
+                            "action": "read"
+                        },
+                        "state": {
+                            "name": "main.modules.list",
+                            "parameters": {
+                                "module": "incidents"
+                            }
+                        },
+                        "icon": "icon icon-incidents",
+                        "editMode": false
+                    },
+                    {
+                        "title": "Tasks",
+                        "require": {
+                            "module": "tasks",
+                            "action": "read"
+                        },
+                        "state": {
+                            "name": "main.modules.list",
+                            "parameters": {
+                                "module": "tasks"
+                            }
+                        },
+                        "icon": "icon icon-tasks",
+                        "editMode": false
+                    },
+                    {
+                        "title": "Indicators",
+                        "require": {
+                            "module": "indicators",
+                            "action": "read"
+                        },
+                        "state": {
+                            "name": "main.modules.list",
+                            "parameters": {
+                                "module": "indicators"
+                            }
+                        },
+                        "icon": "icon icon-indicators",
+                        "editMode": false
+                    },
+                    {
+                        "title": "Campaigns",
+                        "require": {
+                            "module": "campaigns",
+                            "action": "read"
+                        },
+                        "state": {
+                            "name": "main.modules.list",
+                            "parameters": {
+                                "module": "campaigns"
+                            }
+                        },
+                        "icon": "fa fa-money",
+                        "editMode": false
+                    },
+                    {
+                        "title": "Communications",
+                        "require": {
+                            "module": "communication",
+                            "action": "read"
+                        },
+                        "state": {
+                            "name": "main.modules.list",
+                            "parameters": {
+                                "module": "communication"
+                            }
+                        },
+                        "icon": "icon icon-email-templates",
+                        "editMode": false
+                    },
+                    {
+                        "title": "Hunts",
+                        "require": {
+                            "module": "hunt",
+                            "action": "read"
+                        },
+                        "state": {
+                            "name": "main.modules.list",
+                            "parameters": {
+                                "module": "hunt"
+                            }
+                        },
+                        "icon": "fa fa-space-shuttle",
+                        "editMode": false
+                    },
+                    {
+                        "title": "War Rooms",
+                        "require": {
+                            "module": "warrooms",
+                            "action": "read"
+                        },
+                        "state": {
+                            "name": "main.modules.list",
+                            "parameters": {
+                                "module": "warrooms"
+                            }
+                        },
+                        "icon": "icon icon-war-room",
+                        "editMode": false
+                    },
+                    {
+                        "title": "Security Incidents",
+                        "require": {
+                            "module": "security_incidents",
+                            "action": "read"
+                        },
+                        "state": {
+                            "name": "main.modules.list",
+                            "parameters": {
+                                "module": "security_incidents"
+                            }
+                        },
+                        "icon": "icon icon-increase-indent",
+                        "editMode": false
+                    },
+                    {
+                        "title": "Emails",
+                        "require": {
+                            "module": "emails",
+                            "action": "read"
+                        },
+                        "state": {
+                            "name": "main.modules.list",
+                            "parameters": {
+                                "module": "emails"
+                            }
+                        },
+                        "icon": "icon icon-send-email",
+                        "editMode": false
+                    }
+                ],
+                "editMode": false
+            }
+        ]
+    },
+    "uuid": "navigation"
+}
