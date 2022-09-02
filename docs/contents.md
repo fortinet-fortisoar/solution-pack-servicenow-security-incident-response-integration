@@ -7,11 +7,15 @@ The **ServiceNow Security Incident Response Integration** solution pack contains
 
 ## Connectors
 
-- Servicenow
+| Name       | Description                                                                                                       |
+|:-----------|:------------------------------------------------------------------------------------------------------------------|
+| Servicenow | ServiceNow connector provides functionality to create, read, update, and delete records of Table and Catalog type |
 
 ## Modules
 
-- Security Incidents
+| Name               | Description                                                                                                      |
+|:-------------------|:-----------------------------------------------------------------------------------------------------------------|
+| Security Incidents | A schema to create incidents containing details like Severity, Description, Comments, and Phase of the incident. |
 
 ## Roles
 
