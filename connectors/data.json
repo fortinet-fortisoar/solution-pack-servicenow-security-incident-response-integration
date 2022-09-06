@@ -11,12 +11,12 @@
                 "id": 3,
                 "config_id": "ef071ece-968e-4fb4-bdc7-aa84650bec83",
                 "status": 1,
-                "name": "SNOW1_SIR",
+                "name": "SNOW_SIR",
                 "default": true,
                 "config": {
                     "password": "DZt7@PM*a2zp",
                     "username": "admin",
-                    "server_url": "https:\/\/dev66350.service-now.com\/",
+                    "server_url": "https:\/\/dev66360.service-now.com\/",
                     "verify_ssl": false,
                     "authentication_type": "Basic Authentication"
                 },
@@ -49,8 +49,8 @@
         "dataImports": [
             {
                 "id": 1,
-                "name": "Ingestion_servicenow_SNOW1_ef071ece-968e-4fb4-bdc7-aa84650bec83",
-                "description": "Metadata for Ingestion_servicenow_SNOW1_ef071ece-968e-4fb4-bdc7-aa84650bec83",
+                "name": "Ingestion_servicenow_SNOW_SIR_ef071ece-968e-4fb4-bdc7-aa84650bec83",
+                "description": "Metadata for Ingestion_servicenow_SNOW_SIR_ef071ece-968e-4fb4-bdc7-aa84650bec83",
                 "status": null,
                 "created_by": "3451141c-bac6-467c-8d72-85e0fab569ce",
                 "modified_by": "3451141c-bac6-467c-8d72-85e0fab569ce",
@@ -61,7 +61,7 @@
                 "modified_at": "2022-09-06T12:13:38.780632Z",
                 "metadata": {
                     "scheduleId": "gAAAAABjFzlyrXX91WEvfJVe2GoCHW4BkEMwYAcVUoo3PuCC9aCJlOA6CtrWnl9lGWJyw7-QueVoYs25mnXGv9Z0Sf1SpVpdCg==",
-                    "scheduleName": "Ingestion_servicenow_SNOW1_ef071ece-968e-4fb4-bdc7-aa84650bec83",
+                    "scheduleName": "Ingestion_servicenow_SNOW_SIR_ef071ece-968e-4fb4-bdc7-aa84650bec83",
                     "scheduleStatus": true
                 },
                 "configuration": "ef071ece-968e-4fb4-bdc7-aa84650bec83",
@@ -77,20 +77,20 @@
                         "timezone": "UTC"
                     },
                     "interval": null,
-                    "name": "Ingestion_servicenow_SNOW1_ef071ece-968e-4fb4-bdc7-aa84650bec83",
+                    "name": "Ingestion_servicenow_SNOW_SIR_ef071ece-968e-4fb4-bdc7-aa84650bec83",
                     "task": "workflow.tasks.periodic_task",
                     "args": "[]",
                     "kwargs": {
                         "exit_if_running": false,
                         "wf_iri": "\/api\/3\/workflows\/f5a1f43d-8dd3-40e8-9cc3-4f1b3ba1226e",
                         "createUser": "\/api\/3\/people\/3451141c-bac6-467c-8d72-85e0fab569ce",
-                        "name": "Ingestion_servicenow_SNOW1_ef071ece-968e-4fb4-bdc7-aa84650bec83",
-                        "description": "Ingestion_servicenow_SNOW1_ef071ece-968e-4fb4-bdc7-aa84650bec83",
+                        "name": "Ingestion_servicenow_SNOW_SIR_ef071ece-968e-4fb4-bdc7-aa84650bec83",
+                        "description": "Ingestion_servicenow_SNOW_SIR_ef071ece-968e-4fb4-bdc7-aa84650bec83",
                         "auth": {
                             "auth_method": "CS HMAC"
                         },
                         "referenceid": null,
-                        "schedule_entry_name": "Ingestion_servicenow_SNOW1_ef071ece-968e-4fb4-bdc7-aa84650bec83",
+                        "schedule_entry_name": "Ingestion_servicenow_SNOW_SIR_ef071ece-968e-4fb4-bdc7-aa84650bec83",
                         "schedule_id": "89dde28d-3de5-42f0-bed3-ce088f0a1fd4",
                         "expired": false
                     },
@@ -107,7 +107,7 @@
                     "last_run_at": null,
                     "total_run_count": 6,
                     "date_changed": "2022-09-06T12:19:55.309596Z",
-                    "description": "Ingestion_servicenow_SNOW1_ef071ece-968e-4fb4-bdc7-aa84650bec83",
+                    "description": "Ingestion_servicenow_SNOW_SIR_ef071ece-968e-4fb4-bdc7-aa84650bec83",
                     "solar": null,
                     "clocked": null
                 }
@@ -186,7 +186,7 @@
                 {
                     "@context": "\/api\/3\/contexts\/WorkflowCollection",
                     "@type": "WorkflowCollection",
-                    "name": "ServiceNow 3.2.0 SNOW1Ingestion(ef071ece-968e-4fb4-bdc7-aa84650bec83)",
+                    "name": "ServiceNow 3.2.0 SNOW_SIRIngestion(ef071ece-968e-4fb4-bdc7-aa84650bec83)",
                     "description": null,
                     "visible": false,
                     "workflows": [
@@ -196,9 +196,9 @@
                             "name": "> ServiceNow > Create Incident",
                             "aliasName": null,
                             "tag": "#servicenow #dataingestion #create",
-                            "description": "Creates incident in cyops",
+                            "description": "Creates incident record",
                             "isActive": true,
-                            "debug": true,
+                            "debug": false,
                             "singleRecordExecution": false,
                             "remoteExecutableFlag": false,
                             "parameters": [
@@ -351,7 +351,7 @@
                             "tag": "#servicenow #dataingestion #ingest",
                             "description": "Fetches ServiceNow Incidents",
                             "isActive": true,
-                            "debug": true,
+                            "debug": false,
                             "singleRecordExecution": false,
                             "remoteExecutableFlag": false,
                             "parameters": [],
@@ -493,20 +493,20 @@
                                         "timezone": "UTC"
                                     },
                                     "interval": null,
-                                    "name": "Ingestion_servicenow_SNOW1_ef071ece-968e-4fb4-bdc7-aa84650bec83",
+                                    "name": "Ingestion_servicenow_SNOW_SIR_ef071ece-968e-4fb4-bdc7-aa84650bec83",
                                     "task": "workflow.tasks.periodic_task",
                                     "args": "[]",
                                     "kwargs": {
                                         "exit_if_running": false,
                                         "wf_iri": "\/api\/3\/workflows\/f5a1f43d-8dd3-40e8-9cc3-4f1b3ba1226e",
                                         "createUser": "\/api\/3\/people\/3451141c-bac6-467c-8d72-85e0fab569ce",
-                                        "name": "Ingestion_servicenow_SNOW1_ef071ece-968e-4fb4-bdc7-aa84650bec83",
-                                        "description": "Ingestion_servicenow_SNOW1_ef071ece-968e-4fb4-bdc7-aa84650bec83",
+                                        "name": "Ingestion_servicenow_SNOW_SIR_ef071ece-968e-4fb4-bdc7-aa84650bec83",
+                                        "description": "Ingestion_servicenow_SNOW_SIR_ef071ece-968e-4fb4-bdc7-aa84650bec83",
                                         "auth": {
                                             "auth_method": "CS HMAC"
                                         },
                                         "referenceid": null,
-                                        "schedule_entry_name": "Ingestion_servicenow_SNOW1_ef071ece-968e-4fb4-bdc7-aa84650bec83",
+                                        "schedule_entry_name": "Ingestion_servicenow_SNOW_SIR_ef071ece-968e-4fb4-bdc7-aa84650bec83",
                                         "schedule_id": "89dde28d-3de5-42f0-bed3-ce088f0a1fd4",
                                         "expired": false
                                     },
@@ -523,7 +523,7 @@
                                     "last_run_at": null,
                                     "total_run_count": 6,
                                     "date_changed": "2022-09-06T12:19:55.309596Z",
-                                    "description": "Ingestion_servicenow_SNOW1_ef071ece-968e-4fb4-bdc7-aa84650bec83",
+                                    "description": "Ingestion_servicenow_SNOW_SIR_ef071ece-968e-4fb4-bdc7-aa84650bec83",
                                     "solar": null,
                                     "clocked": null
                                 }
@@ -537,7 +537,7 @@
                             "tag": "#servicenow #dataingestion #fetch",
                             "description": "Fetches Incidents from ServiceNow",
                             "isActive": true,
-                            "debug": true,
+                            "debug": false,
                             "singleRecordExecution": false,
                             "remoteExecutableFlag": false,
                             "parameters": [],
@@ -730,7 +730,7 @@
                             "tag": "#servicenow #dataingestion",
                             "description": null,
                             "isActive": true,
-                            "debug": true,
+                            "debug": false,
                             "singleRecordExecution": false,
                             "remoteExecutableFlag": false,
                             "parameters": [],
@@ -909,7 +909,7 @@
                             "name": "> ServiceNow > Create Incident",
                             "aliasName": null,
                             "tag": "#servicenow #dataingestion #create",
-                            "description": "Creates incident in cyops",
+                            "description": "Creates incident record",
                             "isActive": true,
                             "debug": false,
                             "singleRecordExecution": false,
