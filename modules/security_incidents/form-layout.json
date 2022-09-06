@@ -112,6 +112,21 @@
                                                             "readOnly": false
                                                         },
                                                         {
+                                                            "name": "sIRCategory",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "sIRPriority",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "sIRImpact",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
                                                             "name": "incidentLead",
                                                             "highlightMode": true,
                                                             "readOnly": false
@@ -127,33 +142,6 @@
                                         }
                                     ],
                                     "title": "Details"
-                                }
-                            },
-                            {
-                                "type": "formGroup",
-                                "config": {
-                                    "wid": "f74b1a7b-c7c1-4991-a5c6-c9b92560d53a",
-                                    "rows": [
-                                        {
-                                            "columns": [
-                                                {
-                                                    "fields": [
-                                                        {
-                                                            "name": "createDate",
-                                                            "highlightMode": true,
-                                                            "readOnly": false
-                                                        },
-                                                        {
-                                                            "name": "modifyDate",
-                                                            "highlightMode": true,
-                                                            "readOnly": false
-                                                        }
-                                                    ]
-                                                }
-                                            ]
-                                        }
-                                    ],
-                                    "title": "Dates"
                                 }
                             }
                         ],

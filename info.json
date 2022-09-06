@@ -27,7 +27,7 @@
         "ServiceNow"
     ],
     "fsrMinCompatibility": "7.2.0",
-    "date": "2022-07-22T06:12:18+00:00",
+    "date": "2022-09-06T12:26:16+00:00",
     "contents": {
         "picklistNames": [
             {
@@ -41,6 +41,15 @@
             },
             {
                 "name": "Severity"
+            },
+            {
+                "name": "SIRCategory"
+            },
+            {
+                "name": "SIRImpact"
+            },
+            {
+                "name": "SIRPriority"
             }
         ],
         "modules": {
