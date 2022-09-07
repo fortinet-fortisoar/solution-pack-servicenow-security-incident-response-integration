@@ -10,13 +10,49 @@
                         "widgets": [
                             {
                                 "type": "grid",
-                                "config": []
+                                "config": {
+                                    "wid": "59bf7830-edf8-4e0e-8aa5-729319552dea",
+                                    "module": "security_incidents",
+                                    "columns": [
+                                        "id",
+                                        "severity",
+                                        "name",
+                                        "source",
+                                        "type",
+                                        "phase",
+                                        "status",
+                                        "incidentLead",
+                                        "sIRCategory",
+                                        "sIRPriority",
+                                        "sIRImpact",
+                                        "fsrQueue"
+                                    ],
+                                    "expandableCol": [],
+                                    "relationshipField": [],
+                                    "checkboxStatus": false,
+                                    "editableFields": false,
+                                    "actionButtons": [],
+                                    "query": {
+                                        "sort": [],
+                                        "limit": 30,
+                                        "logic": "AND",
+                                        "filters": []
+                                    }
+                                }
                             }
-                        ]
+                        ],
+                        "style": "col-lg-12"
                     }
-                ]
+                ],
+                "wid": "6f876f1e-cfa4-4984-99dc-959e0e6962b4",
+                "_collapsed": false
             }
-        ]
+        ],
+        "wid": "b6f34abc-3b8e-4bac-993f-aecca4ddb07e",
+        "metadata": {
+            "customTemplateTitle": "Security Incidents",
+            "originalTemplateTitle": "Security Incidents"
+        }
     },
     "uuid": "modules-security_incidents-list"
 }

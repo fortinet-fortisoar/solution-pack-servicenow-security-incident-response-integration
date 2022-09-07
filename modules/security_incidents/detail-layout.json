@@ -742,7 +742,8 @@
                                                                                                     "comments",
                                                                                                     "userOwners",
                                                                                                     "attachments",
-                                                                                                    "owners"
+                                                                                                    "owners",
+                                                                                                    "tasks"
                                                                                                 ],
                                                                                                 "selectionType": "exclude",
                                                                                                 "expandableCol": [],
