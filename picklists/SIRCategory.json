@@ -1,0 +1,220 @@
+{
+    "@context": "\/api\/3\/contexts\/PicklistName",
+    "@id": "\/api\/3\/picklist_names\/d45bdab3-6c0a-45bb-afe1-216b18b3a895",
+    "@type": "PicklistName",
+    "name": "SIRCategory",
+    "system": false,
+    "picklists": [
+        {
+            "@id": "\/api\/3\/picklists\/6add1c2e-6489-4254-9c28-d117e0bbfcc9",
+            "@type": "Picklist",
+            "itemValue": "Confidential personal identity data exposure",
+            "orderIndex": 0,
+            "color": null,
+            "icon": null,
+            "listName": "\/api\/3\/picklist_names\/d45bdab3-6c0a-45bb-afe1-216b18b3a895",
+            "uuid": "6add1c2e-6489-4254-9c28-d117e0bbfcc9"
+        },
+        {
+            "@id": "\/api\/3\/picklists\/667ba416-ca5d-43cb-9e6c-66de35a5b192",
+            "@type": "Picklist",
+            "itemValue": "Criminal activity\/investigation",
+            "orderIndex": 1,
+            "color": null,
+            "icon": null,
+            "listName": "\/api\/3\/picklist_names\/d45bdab3-6c0a-45bb-afe1-216b18b3a895",
+            "uuid": "667ba416-ca5d-43cb-9e6c-66de35a5b192"
+        },
+        {
+            "@id": "\/api\/3\/picklists\/f8a7d9e9-c7ff-4a58-ad08-202995319d62",
+            "@type": "Picklist",
+            "itemValue": "Denial of Service",
+            "orderIndex": 2,
+            "color": null,
+            "icon": null,
+            "listName": "\/api\/3\/picklist_names\/d45bdab3-6c0a-45bb-afe1-216b18b3a895",
+            "uuid": "f8a7d9e9-c7ff-4a58-ad08-202995319d62"
+        },
+        {
+            "@id": "\/api\/3\/picklists\/df607a53-b470-42ef-b2c4-ec1875218824",
+            "@type": "Picklist",
+            "itemValue": "Digital Millennium Copyright Act (DMCA) violation",
+            "orderIndex": 3,
+            "color": null,
+            "icon": null,
+            "listName": "\/api\/3\/picklist_names\/d45bdab3-6c0a-45bb-afe1-216b18b3a895",
+            "uuid": "df607a53-b470-42ef-b2c4-ec1875218824"
+        },
+        {
+            "@id": "\/api\/3\/picklists\/cf3b94a2-30d2-4a45-a611-c579ba53a1b1",
+            "@type": "Picklist",
+            "itemValue": "Equipment loss",
+            "orderIndex": 4,
+            "color": null,
+            "icon": null,
+            "listName": "\/api\/3\/picklist_names\/d45bdab3-6c0a-45bb-afe1-216b18b3a895",
+            "uuid": "cf3b94a2-30d2-4a45-a611-c579ba53a1b1"
+        },
+        {
+            "@id": "\/api\/3\/picklists\/2ebbff3c-3271-4674-b437-632ac04b719f",
+            "@type": "Picklist",
+            "itemValue": "Malicious code activity",
+            "orderIndex": 5,
+            "color": null,
+            "icon": null,
+            "listName": "\/api\/3\/picklist_names\/d45bdab3-6c0a-45bb-afe1-216b18b3a895",
+            "uuid": "2ebbff3c-3271-4674-b437-632ac04b719f"
+        },
+        {
+            "@id": "\/api\/3\/picklists\/3a17c37e-0118-4935-a07c-5721c7552b87",
+            "@type": "Picklist",
+            "itemValue": "No Incident",
+            "orderIndex": 6,
+            "color": null,
+            "icon": null,
+            "listName": "\/api\/3\/picklist_names\/d45bdab3-6c0a-45bb-afe1-216b18b3a895",
+            "uuid": "3a17c37e-0118-4935-a07c-5721c7552b87"
+        },
+        {
+            "@id": "\/api\/3\/picklists\/d5b21e7a-5b93-4bd6-8a6b-823c378627b4",
+            "@type": "Picklist",
+            "itemValue": "Policy violation",
+            "orderIndex": 7,
+            "color": null,
+            "icon": null,
+            "listName": "\/api\/3\/picklist_names\/d45bdab3-6c0a-45bb-afe1-216b18b3a895",
+            "uuid": "d5b21e7a-5b93-4bd6-8a6b-823c378627b4"
+        },
+        {
+            "@id": "\/api\/3\/picklists\/b6aa9103-d63a-42d3-beff-4cddd9c06b58",
+            "@type": "Picklist",
+            "itemValue": "Privilege Escalation",
+            "orderIndex": 8,
+            "color": null,
+            "icon": null,
+            "listName": "\/api\/3\/picklist_names\/d45bdab3-6c0a-45bb-afe1-216b18b3a895",
+            "uuid": "b6aa9103-d63a-42d3-beff-4cddd9c06b58"
+        },
+        {
+            "@id": "\/api\/3\/picklists\/633155c4-7946-4dbc-8055-b19d02762013",
+            "@type": "Picklist",
+            "itemValue": "Reconnaissance activity",
+            "orderIndex": 9,
+            "color": null,
+            "icon": null,
+            "listName": "\/api\/3\/picklist_names\/d45bdab3-6c0a-45bb-afe1-216b18b3a895",
+            "uuid": "633155c4-7946-4dbc-8055-b19d02762013"
+        },
+        {
+            "@id": "\/api\/3\/picklists\/3462b409-8ffc-47fe-9b15-2f4cfba762e6",
+            "@type": "Picklist",
+            "itemValue": "Rogue server or service",
+            "orderIndex": 10,
+            "color": null,
+            "icon": null,
+            "listName": "\/api\/3\/picklist_names\/d45bdab3-6c0a-45bb-afe1-216b18b3a895",
+            "uuid": "3462b409-8ffc-47fe-9b15-2f4cfba762e6"
+        },
+        {
+            "@id": "\/api\/3\/picklists\/843a8f8b-6cbc-4190-9fb8-5003e45392a1",
+            "@type": "Picklist",
+            "itemValue": "Spam source",
+            "orderIndex": 11,
+            "color": null,
+            "icon": null,
+            "listName": "\/api\/3\/picklist_names\/d45bdab3-6c0a-45bb-afe1-216b18b3a895",
+            "uuid": "843a8f8b-6cbc-4190-9fb8-5003e45392a1"
+        },
+        {
+            "@id": "\/api\/3\/picklists\/5e28e46c-ff74-4dd6-86cd-3dd0097af3e4",
+            "@type": "Picklist",
+            "itemValue": "Phishing",
+            "orderIndex": 12,
+            "color": null,
+            "icon": null,
+            "listName": "\/api\/3\/picklist_names\/d45bdab3-6c0a-45bb-afe1-216b18b3a895",
+            "uuid": "5e28e46c-ff74-4dd6-86cd-3dd0097af3e4"
+        },
+        {
+            "@id": "\/api\/3\/picklists\/8aac8640-c289-4acc-a10a-243a3d72fcd4",
+            "@type": "Picklist",
+            "itemValue": "Un-patched vulnerability",
+            "orderIndex": 13,
+            "color": null,
+            "icon": null,
+            "listName": "\/api\/3\/picklist_names\/d45bdab3-6c0a-45bb-afe1-216b18b3a895",
+            "uuid": "8aac8640-c289-4acc-a10a-243a3d72fcd4"
+        },
+        {
+            "@id": "\/api\/3\/picklists\/7c8427c1-0081-46f1-9165-b91ff2abba44",
+            "@type": "Picklist",
+            "itemValue": "Unauthorized access",
+            "orderIndex": 14,
+            "color": null,
+            "icon": null,
+            "listName": "\/api\/3\/picklist_names\/d45bdab3-6c0a-45bb-afe1-216b18b3a895",
+            "uuid": "7c8427c1-0081-46f1-9165-b91ff2abba44"
+        },
+        {
+            "@id": "\/api\/3\/picklists\/47a26311-f993-4b89-85fc-f3b15720e6a6",
+            "@type": "Picklist",
+            "itemValue": "Web\/BBS defacement",
+            "orderIndex": 15,
+            "color": null,
+            "icon": null,
+            "listName": "\/api\/3\/picklist_names\/d45bdab3-6c0a-45bb-afe1-216b18b3a895",
+            "uuid": "47a26311-f993-4b89-85fc-f3b15720e6a6"
+        },
+        {
+            "@id": "\/api\/3\/picklists\/cd16a444-82be-4530-b02b-781ac2cf85c4",
+            "@type": "Picklist",
+            "itemValue": "Shared Intelligence",
+            "orderIndex": 16,
+            "color": null,
+            "icon": null,
+            "listName": "\/api\/3\/picklist_names\/d45bdab3-6c0a-45bb-afe1-216b18b3a895",
+            "uuid": "cd16a444-82be-4530-b02b-781ac2cf85c4"
+        },
+        {
+            "@id": "\/api\/3\/picklists\/504ed740-9238-4ed2-a4b9-3127430cb453",
+            "@type": "Picklist",
+            "itemValue": "Failed Login",
+            "orderIndex": 17,
+            "color": null,
+            "icon": null,
+            "listName": "\/api\/3\/picklist_names\/d45bdab3-6c0a-45bb-afe1-216b18b3a895",
+            "uuid": "504ed740-9238-4ed2-a4b9-3127430cb453"
+        },
+        {
+            "@id": "\/api\/3\/picklists\/de50ba6b-e38c-4d5a-b0be-9488407a1e97",
+            "@type": "Picklist",
+            "itemValue": "Lost or stolen laptop",
+            "orderIndex": 18,
+            "color": null,
+            "icon": null,
+            "listName": "\/api\/3\/picklist_names\/d45bdab3-6c0a-45bb-afe1-216b18b3a895",
+            "uuid": "de50ba6b-e38c-4d5a-b0be-9488407a1e97"
+        },
+        {
+            "@id": "\/api\/3\/picklists\/2e015c70-a5c1-4855-99d2-d154f5274adf",
+            "@type": "Picklist",
+            "itemValue": "Malware",
+            "orderIndex": 19,
+            "color": null,
+            "icon": null,
+            "listName": "\/api\/3\/picklist_names\/d45bdab3-6c0a-45bb-afe1-216b18b3a895",
+            "uuid": "2e015c70-a5c1-4855-99d2-d154f5274adf"
+        },
+        {
+            "@id": "\/api\/3\/picklists\/113ef097-9e53-4864-ab74-0ff3d6376a1e",
+            "@type": "Picklist",
+            "itemValue": "Insider Breach",
+            "orderIndex": 20,
+            "color": null,
+            "icon": null,
+            "listName": "\/api\/3\/picklist_names\/d45bdab3-6c0a-45bb-afe1-216b18b3a895",
+            "uuid": "113ef097-9e53-4864-ab74-0ff3d6376a1e"
+        }
+    ],
+    "uuid": "d45bdab3-6c0a-45bb-afe1-216b18b3a895"
+}

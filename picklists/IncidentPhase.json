@@ -74,6 +74,36 @@
             "icon": null,
             "listName": "\/api\/3\/picklist_names\/b862eb1f-b385-40ca-baa7-5a1b1f91a651",
             "uuid": "cbaa92d2-6fd7-4dbe-88f6-0e0d17e8b430"
+        },
+        {
+            "@id": "\/api\/3\/picklists\/752928a0-c62f-450f-b773-86d48c4174bb",
+            "@type": "Picklist",
+            "itemValue": "Review",
+            "orderIndex": 7,
+            "color": null,
+            "icon": null,
+            "listName": "\/api\/3\/picklist_names\/b862eb1f-b385-40ca-baa7-5a1b1f91a651",
+            "uuid": "752928a0-c62f-450f-b773-86d48c4174bb"
+        },
+        {
+            "@id": "\/api\/3\/picklists\/9d945814-ab61-4ebc-bd18-c0e9d9a29216",
+            "@type": "Picklist",
+            "itemValue": "Closed",
+            "orderIndex": 8,
+            "color": null,
+            "icon": null,
+            "listName": "\/api\/3\/picklist_names\/b862eb1f-b385-40ca-baa7-5a1b1f91a651",
+            "uuid": "9d945814-ab61-4ebc-bd18-c0e9d9a29216"
+        },
+        {
+            "@id": "\/api\/3\/picklists\/1b77f15b-904b-4cac-9c5e-46d8edf457b4",
+            "@type": "Picklist",
+            "itemValue": "Draft",
+            "orderIndex": 9,
+            "color": null,
+            "icon": null,
+            "listName": "\/api\/3\/picklist_names\/b862eb1f-b385-40ca-baa7-5a1b1f91a651",
+            "uuid": "1b77f15b-904b-4cac-9c5e-46d8edf457b4"
         }
     ],
     "uuid": "b862eb1f-b385-40ca-baa7-5a1b1f91a651"

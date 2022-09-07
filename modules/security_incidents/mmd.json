@@ -1,6 +1,6 @@
 {
     "@context": "\/api\/3\/contexts\/StagingModelMetadata",
-    "@id": "\/api\/3\/staging_model_metadatas\/924aa7cd-91c5-459f-8820-86ef9e7d0dae",
+    "@id": "\/api\/3\/staging_model_metadatas\/6802a580-7574-4b38-93fd-f53fc317c910",
     "@type": "StagingModelMetadata",
     "type": "security_incidents",
     "parentType": null,
@@ -25,12 +25,73 @@
     "writable": true,
     "attributes": [
         {
+            "@id": "\/api\/3\/attribute_metadatas\/bfd8e251-ce2e-41e9-b1d2-f881f96e0914",
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "sourceData",
+            "length": null,
+            "orderIndex": 19,
+            "formType": "textarea",
+            "dataSource": null,
+            "searchable": true,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761,
+                "_enableRange": false
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": null,
+            "tooltip": null,
+            "visibility": [
+                {
+                    "sort": [],
+                    "limit": 30,
+                    "logic": "OR",
+                    "filters": [
+                        {
+                            "field": "sourceData",
+                            "operator": "isnull",
+                            "_operator": "isnull",
+                            "value": "false",
+                            "type": "primitive"
+                        }
+                    ]
+                }
+            ],
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "uuid": "bfd8e251-ce2e-41e9-b1d2-f881f96e0914",
+            "displayName": "{{ sourceData }}",
+            "descriptions": {
+                "singular": "Source Data"
+            }
+        },
+        {
             "@id": "\/api\/3\/attribute_metadatas\/3636ec0b-6421-45b3-bd6f-c65b715305bb",
             "@type": "AttributeMetadata",
             "type": "comments",
             "name": "comments",
             "length": null,
-            "orderIndex": 1,
+            "orderIndex": 9,
             "formType": "manyToMany",
             "dataSource": {
                 "model": "comments"
@@ -46,7 +107,8 @@
             "validation": {
                 "required": false,
                 "minlength": 0,
-                "maxlength": 10485761
+                "maxlength": 10485761,
+                "_enableRange": false
             },
             "bulkAction": [],
             "dataSourceFilters": null,
@@ -72,7 +134,7 @@
             "type": "string",
             "name": "sourceID",
             "length": null,
-            "orderIndex": 7,
+            "orderIndex": 15,
             "formType": "text",
             "dataSource": null,
             "searchable": true,
@@ -117,7 +179,7 @@
             "type": "picklists",
             "name": "status",
             "length": null,
-            "orderIndex": 8,
+            "orderIndex": 16,
             "formType": "picklist",
             "dataSource": {
                 "model": "picklists",
@@ -202,7 +264,7 @@
             "type": "string",
             "name": "source",
             "length": null,
-            "orderIndex": 9,
+            "orderIndex": 17,
             "formType": "text",
             "dataSource": null,
             "searchable": false,
@@ -247,7 +309,7 @@
             "type": "picklists",
             "name": "type",
             "length": null,
-            "orderIndex": 10,
+            "orderIndex": 18,
             "formType": "picklist",
             "dataSource": {
                 "model": "picklists",
@@ -373,7 +435,8 @@
             "validation": {
                 "required": false,
                 "minlength": 0,
-                "maxlength": 10485761
+                "maxlength": 10485761,
+                "_enableRange": false
             },
             "bulkAction": {
                 "allow": false,
@@ -399,27 +462,111 @@
             }
         },
         {
-            "@id": "\/api\/3\/attribute_metadatas\/bfd8e251-ce2e-41e9-b1d2-f881f96e0914",
+            "@id": "\/api\/3\/attribute_metadatas\/64d1b057-0685-4ccd-a1af-522a103657ef",
             "@type": "AttributeMetadata",
             "type": "string",
-            "name": "sourceData",
+            "name": "name",
             "length": null,
-            "orderIndex": 11,
-            "formType": "textarea",
+            "orderIndex": 24,
+            "formType": "text",
             "dataSource": null,
             "searchable": true,
             "peerReplicable": true,
             "system": false,
             "encrypted": false,
-            "gridColumn": false,
+            "gridColumn": true,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": true,
+                "minlength": 0,
+                "maxlength": 1024
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "uuid": "64d1b057-0685-4ccd-a1af-522a103657ef",
+            "displayName": "{{ name }}",
+            "descriptions": {
+                "singular": "Name"
+            }
+        },
+        {
+            "@id": "\/api\/3\/attribute_metadatas\/32aa70ee-ece9-4511-bb87-3c42085fe8d7",
+            "@type": "AttributeMetadata",
+            "type": "picklists",
+            "name": "sIRPriority",
+            "length": null,
+            "orderIndex": 7,
+            "formType": "picklist",
+            "dataSource": {
+                "model": "picklists",
+                "query": {
+                    "logic": "AND",
+                    "filters": [
+                        {
+                            "field": "listName__name",
+                            "operator": "eq",
+                            "value": "SIRPriority"
+                        }
+                    ],
+                    "sort": [
+                        {
+                            "field": "orderIndex",
+                            "direction": "ASC"
+                        }
+                    ]
+                },
+                "displayConditions": {
+                    "79bd6bda-a110-4aaf-b89b-69634f4a4162": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "cc231cc2-514b-410c-ab5d-d6a6c5a73ac4": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "92427170-84eb-446f-8736-5a29815c6cc0": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "d350a47e-5367-4668-b2f7-f79bc7ed830e": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "e2b53c57-d58f-4b1e-8677-de3312cbd80f": {
+                        "visibility": "visible",
+                        "conditions": null
+                    }
+                }
+            },
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": true,
             "collection": false,
             "inversedField": null,
             "ownsRelationship": false,
             "validation": {
                 "required": false,
                 "minlength": 0,
-                "maxlength": 10485761,
-                "_enableRange": false
+                "maxlength": 10485761
             },
             "bulkAction": {
                 "allow": false,
@@ -430,22 +577,7 @@
             "dataSourceFilters": null,
             "defaultValue": null,
             "tooltip": null,
-            "visibility": [
-                {
-                    "sort": [],
-                    "limit": 30,
-                    "logic": "OR",
-                    "filters": [
-                        {
-                            "field": "sourceData",
-                            "operator": "isnull",
-                            "_operator": "isnull",
-                            "value": "false",
-                            "type": "primitive"
-                        }
-                    ]
-                }
-            ],
+            "visibility": true,
             "htmlEscape": false,
             "orphanRemoval": null,
             "readable": true,
@@ -453,10 +585,10 @@
             "identifier": null,
             "unique": false,
             "recommend": false,
-            "uuid": "bfd8e251-ce2e-41e9-b1d2-f881f96e0914",
-            "displayName": "{{ sourceData }}",
+            "uuid": "32aa70ee-ece9-4511-bb87-3c42085fe8d7",
+            "displayName": "{{ sIRPriority }}",
             "descriptions": {
-                "singular": "Source Data"
+                "singular": "SIR Priority"
             }
         },
         {
@@ -465,7 +597,7 @@
             "type": "string",
             "name": "sourceIP",
             "length": null,
-            "orderIndex": 12,
+            "orderIndex": 20,
             "formType": "text",
             "dataSource": null,
             "searchable": true,
@@ -551,7 +683,7 @@
             "type": "people",
             "name": "incidentLead",
             "length": null,
-            "orderIndex": 13,
+            "orderIndex": 21,
             "formType": "lookup",
             "dataSource": {
                 "model": "people"
@@ -593,12 +725,89 @@
             }
         },
         {
+            "@id": "\/api\/3\/attribute_metadatas\/3a32c14c-2749-422d-a730-53351a754e95",
+            "@type": "AttributeMetadata",
+            "type": "picklists",
+            "name": "sIRImpact",
+            "length": null,
+            "orderIndex": 6,
+            "formType": "picklist",
+            "dataSource": {
+                "model": "picklists",
+                "query": {
+                    "logic": "AND",
+                    "filters": [
+                        {
+                            "field": "listName__name",
+                            "operator": "eq",
+                            "value": "SIRImpact"
+                        }
+                    ],
+                    "sort": [
+                        {
+                            "field": "orderIndex",
+                            "direction": "ASC"
+                        }
+                    ]
+                },
+                "displayConditions": {
+                    "7f05df27-62a1-401a-8191-f865ddcbd3b1": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "c5a832cc-a117-4058-862f-d0a1689ff9e0": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "87542d13-b5a5-43be-81fd-a10fa3fafa5c": {
+                        "visibility": "visible",
+                        "conditions": null
+                    }
+                }
+            },
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": true,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": null,
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "uuid": "3a32c14c-2749-422d-a730-53351a754e95",
+            "displayName": "{{ sIRImpact }}",
+            "descriptions": {
+                "singular": "SIR Impact"
+            }
+        },
+        {
             "@id": "\/api\/3\/attribute_metadatas\/f44f2081-efae-4291-9096-8958ab2bbe1c",
             "@type": "AttributeMetadata",
             "type": "string",
             "name": "phaseInfographics",
             "length": null,
-            "orderIndex": 14,
+            "orderIndex": 22,
             "formType": "html",
             "dataSource": null,
             "searchable": true,
@@ -624,22 +833,7 @@
             "dataSourceFilters": null,
             "defaultValue": "",
             "tooltip": null,
-            "visibility": [
-                {
-                    "sort": [],
-                    "limit": 30,
-                    "logic": "AND",
-                    "filters": [
-                        {
-                            "field": "phaseInfographics",
-                            "operator": "isnull",
-                            "_operator": "isnull",
-                            "value": "false",
-                            "type": "primitive"
-                        }
-                    ]
-                }
-            ],
+            "visibility": true,
             "htmlEscape": false,
             "orphanRemoval": null,
             "readable": true,
@@ -654,12 +848,147 @@
             }
         },
         {
+            "@id": "\/api\/3\/attribute_metadatas\/cc94d12d-29b6-442e-8405-4c9da826d7e7",
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "description",
+            "length": null,
+            "orderIndex": 13,
+            "formType": "richtext",
+            "dataSource": null,
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": null,
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "uuid": "cc94d12d-29b6-442e-8405-4c9da826d7e7",
+            "displayName": "{{ description }}",
+            "descriptions": {
+                "singular": "Description"
+            }
+        },
+        {
+            "@id": "\/api\/3\/attribute_metadatas\/dddd0c23-1374-47ab-8c34-e48e95bc976f",
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "riskScore",
+            "length": null,
+            "orderIndex": 11,
+            "formType": "text",
+            "dataSource": null,
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "uuid": "dddd0c23-1374-47ab-8c34-e48e95bc976f",
+            "displayName": "{{ riskScore }}",
+            "descriptions": {
+                "singular": "Risk Score"
+            }
+        },
+        {
+            "@id": "\/api\/3\/attribute_metadatas\/e0f7e1e9-291a-4ea1-93e1-ec8242639082",
+            "@type": "AttributeMetadata",
+            "type": "string",
+            "name": "assignmentGroup",
+            "length": null,
+            "orderIndex": 10,
+            "formType": "text",
+            "dataSource": null,
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": false,
+            "inversedField": null,
+            "ownsRelationship": false,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761
+            },
+            "bulkAction": {
+                "allow": false,
+                "buttonText": "",
+                "buttonIcon": "",
+                "buttonClass": "btn btn-default btn-sm"
+            },
+            "dataSourceFilters": null,
+            "defaultValue": "",
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "uuid": "e0f7e1e9-291a-4ea1-93e1-ec8242639082",
+            "displayName": "{{ assignmentGroup }}",
+            "descriptions": {
+                "singular": "Assignment Group"
+            }
+        },
+        {
             "@id": "\/api\/3\/attribute_metadatas\/d7623f76-aadf-4831-890a-b54368785d46",
             "@type": "AttributeMetadata",
             "type": "string",
             "name": "fileHash",
             "length": null,
-            "orderIndex": 15,
+            "orderIndex": 23,
             "formType": "text",
             "dataSource": null,
             "searchable": true,
@@ -729,12 +1058,54 @@
             }
         },
         {
+            "@id": "\/api\/3\/attribute_metadatas\/be66f819-ac25-4c5a-bb81-a1bd72879a5e",
+            "@type": "AttributeMetadata",
+            "type": "assets",
+            "name": "assets",
+            "length": null,
+            "orderIndex": 5,
+            "formType": "manyToMany",
+            "dataSource": {
+                "model": "assets"
+            },
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": true,
+            "inversedField": "securityIncidents",
+            "ownsRelationship": true,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761
+            },
+            "bulkAction": [],
+            "dataSourceFilters": null,
+            "defaultValue": null,
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "uuid": "be66f819-ac25-4c5a-bb81-a1bd72879a5e",
+            "displayName": "{{ assets }}",
+            "descriptions": {
+                "singular": "Assets"
+            }
+        },
+        {
             "@id": "\/api\/3\/attribute_metadatas\/2e985b91-64f2-4e71-bd6e-e8ffa8cdda5a",
             "@type": "AttributeMetadata",
             "type": "picklists",
             "name": "severity",
             "length": null,
-            "orderIndex": 4,
+            "orderIndex": 12,
             "formType": "picklist",
             "dataSource": {
                 "model": "picklists",
@@ -756,7 +1127,7 @@
                 },
                 "displayConditions": {
                     "0d609b08-45e0-469f-8910-41145c0b7c03": {
-                        "visibility": "visible",
+                        "visibility": "hidden",
                         "conditions": null
                     },
                     "40187287-89fc-4e9c-b717-e9443d57eedb": {
@@ -768,14 +1139,15 @@
                         "conditions": null
                     },
                     "7efa2220-39bb-44e4-961f-ac368776e3b0": {
-                        "visibility": "visible",
+                        "visibility": "hidden",
                         "conditions": null
                     },
                     "b3c20a3a-ecfd-4adc-a225-0205968e6793": {
                         "visibility": "visible",
                         "conditions": null
                     }
-                }
+                },
+                "useDisplayConditions": true
             },
             "searchable": false,
             "peerReplicable": true,
@@ -788,7 +1160,8 @@
             "validation": {
                 "required": false,
                 "minlength": 0,
-                "maxlength": 10485761
+                "maxlength": 10485761,
+                "_enableRange": false
             },
             "bulkAction": {
                 "allow": true,
@@ -814,102 +1187,12 @@
             }
         },
         {
-            "@id": "\/api\/3\/attribute_metadatas\/cc94d12d-29b6-442e-8405-4c9da826d7e7",
-            "@type": "AttributeMetadata",
-            "type": "string",
-            "name": "description",
-            "length": null,
-            "orderIndex": 5,
-            "formType": "richtext",
-            "dataSource": null,
-            "searchable": false,
-            "peerReplicable": true,
-            "system": false,
-            "encrypted": false,
-            "gridColumn": false,
-            "collection": false,
-            "inversedField": null,
-            "ownsRelationship": false,
-            "validation": {
-                "required": false,
-                "minlength": 0,
-                "maxlength": 10485761
-            },
-            "bulkAction": {
-                "allow": false,
-                "buttonText": "",
-                "buttonIcon": "",
-                "buttonClass": "btn btn-default btn-sm"
-            },
-            "dataSourceFilters": null,
-            "defaultValue": null,
-            "tooltip": null,
-            "visibility": true,
-            "htmlEscape": false,
-            "orphanRemoval": null,
-            "readable": true,
-            "writeable": true,
-            "identifier": null,
-            "unique": false,
-            "recommend": false,
-            "uuid": "cc94d12d-29b6-442e-8405-4c9da826d7e7",
-            "displayName": "{{ description }}",
-            "descriptions": {
-                "singular": "Description"
-            }
-        },
-        {
-            "@id": "\/api\/3\/attribute_metadatas\/64d1b057-0685-4ccd-a1af-522a103657ef",
-            "@type": "AttributeMetadata",
-            "type": "string",
-            "name": "name",
-            "length": null,
-            "orderIndex": 16,
-            "formType": "text",
-            "dataSource": null,
-            "searchable": false,
-            "peerReplicable": true,
-            "system": false,
-            "encrypted": false,
-            "gridColumn": false,
-            "collection": false,
-            "inversedField": null,
-            "ownsRelationship": false,
-            "validation": {
-                "required": true,
-                "minlength": 0,
-                "maxlength": 1024
-            },
-            "bulkAction": {
-                "allow": false,
-                "buttonText": "",
-                "buttonIcon": "",
-                "buttonClass": "btn btn-default btn-sm"
-            },
-            "dataSourceFilters": null,
-            "defaultValue": "",
-            "tooltip": null,
-            "visibility": true,
-            "htmlEscape": false,
-            "orphanRemoval": null,
-            "readable": true,
-            "writeable": true,
-            "identifier": null,
-            "unique": false,
-            "recommend": false,
-            "uuid": "64d1b057-0685-4ccd-a1af-522a103657ef",
-            "displayName": "{{ name }}",
-            "descriptions": {
-                "singular": "Name"
-            }
-        },
-        {
             "@id": "\/api\/3\/attribute_metadatas\/397b9211-5efb-4abf-8aa1-964b23b08ae6",
             "@type": "AttributeMetadata",
             "type": "string",
             "name": "affectedUser",
             "length": null,
-            "orderIndex": 17,
+            "orderIndex": 25,
             "formType": "text",
             "dataSource": null,
             "searchable": false,
@@ -949,35 +1232,32 @@
             }
         },
         {
-            "@id": "\/api\/3\/attribute_metadatas\/dddd0c23-1374-47ab-8c34-e48e95bc976f",
+            "@id": "\/api\/3\/attribute_metadatas\/1bef0596-e315-4585-bfb4-762cb2f15970",
             "@type": "AttributeMetadata",
-            "type": "string",
-            "name": "riskScore",
+            "type": "alerts",
+            "name": "alerts",
             "length": null,
-            "orderIndex": 3,
-            "formType": "text",
-            "dataSource": null,
+            "orderIndex": 4,
+            "formType": "manyToMany",
+            "dataSource": {
+                "model": "alerts"
+            },
             "searchable": false,
             "peerReplicable": true,
             "system": false,
             "encrypted": false,
             "gridColumn": false,
-            "collection": false,
-            "inversedField": null,
-            "ownsRelationship": false,
+            "collection": true,
+            "inversedField": "securityIncidents",
+            "ownsRelationship": true,
             "validation": {
                 "required": false,
                 "minlength": 0,
                 "maxlength": 10485761
             },
-            "bulkAction": {
-                "allow": false,
-                "buttonText": "",
-                "buttonIcon": "",
-                "buttonClass": "btn btn-default btn-sm"
-            },
+            "bulkAction": [],
             "dataSourceFilters": null,
-            "defaultValue": "",
+            "defaultValue": null,
             "tooltip": null,
             "visibility": true,
             "htmlEscape": false,
@@ -987,33 +1267,138 @@
             "identifier": null,
             "unique": false,
             "recommend": false,
-            "uuid": "dddd0c23-1374-47ab-8c34-e48e95bc976f",
-            "displayName": "{{ riskScore }}",
+            "uuid": "1bef0596-e315-4585-bfb4-762cb2f15970",
+            "displayName": "{{ alerts }}",
             "descriptions": {
-                "singular": "Risk Score"
+                "singular": "Alerts"
             }
         },
         {
-            "@id": "\/api\/3\/attribute_metadatas\/e0f7e1e9-291a-4ea1-93e1-ec8242639082",
+            "@id": "\/api\/3\/attribute_metadatas\/43a72d7a-484a-496e-808e-be3473f68663",
             "@type": "AttributeMetadata",
-            "type": "string",
-            "name": "assignmentGroup",
+            "type": "picklists",
+            "name": "sIRCategory",
             "length": null,
-            "orderIndex": 2,
-            "formType": "text",
-            "dataSource": null,
+            "orderIndex": 8,
+            "formType": "picklist",
+            "dataSource": {
+                "model": "picklists",
+                "query": {
+                    "logic": "AND",
+                    "filters": [
+                        {
+                            "field": "listName__name",
+                            "operator": "eq",
+                            "value": "SIRCategory"
+                        }
+                    ],
+                    "sort": [
+                        {
+                            "field": "orderIndex",
+                            "direction": "ASC"
+                        }
+                    ]
+                },
+                "displayConditions": {
+                    "6add1c2e-6489-4254-9c28-d117e0bbfcc9": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "667ba416-ca5d-43cb-9e6c-66de35a5b192": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "f8a7d9e9-c7ff-4a58-ad08-202995319d62": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "df607a53-b470-42ef-b2c4-ec1875218824": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "cf3b94a2-30d2-4a45-a611-c579ba53a1b1": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "2ebbff3c-3271-4674-b437-632ac04b719f": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "3a17c37e-0118-4935-a07c-5721c7552b87": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "d5b21e7a-5b93-4bd6-8a6b-823c378627b4": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "b6aa9103-d63a-42d3-beff-4cddd9c06b58": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "633155c4-7946-4dbc-8055-b19d02762013": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "3462b409-8ffc-47fe-9b15-2f4cfba762e6": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "843a8f8b-6cbc-4190-9fb8-5003e45392a1": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "5e28e46c-ff74-4dd6-86cd-3dd0097af3e4": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "8aac8640-c289-4acc-a10a-243a3d72fcd4": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "7c8427c1-0081-46f1-9165-b91ff2abba44": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "47a26311-f993-4b89-85fc-f3b15720e6a6": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "cd16a444-82be-4530-b02b-781ac2cf85c4": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "504ed740-9238-4ed2-a4b9-3127430cb453": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "de50ba6b-e38c-4d5a-b0be-9488407a1e97": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "2e015c70-a5c1-4855-99d2-d154f5274adf": {
+                        "visibility": "visible",
+                        "conditions": null
+                    },
+                    "113ef097-9e53-4864-ab74-0ff3d6376a1e": {
+                        "visibility": "visible",
+                        "conditions": null
+                    }
+                }
+            },
             "searchable": false,
             "peerReplicable": true,
             "system": false,
             "encrypted": false,
-            "gridColumn": false,
+            "gridColumn": true,
             "collection": false,
             "inversedField": null,
             "ownsRelationship": false,
             "validation": {
                 "required": false,
                 "minlength": 0,
-                "maxlength": 10485761
+                "maxlength": 10485761,
+                "_enableRange": false
             },
             "bulkAction": {
                 "allow": false,
@@ -1022,7 +1407,7 @@
                 "buttonClass": "btn btn-default btn-sm"
             },
             "dataSourceFilters": null,
-            "defaultValue": "",
+            "defaultValue": null,
             "tooltip": null,
             "visibility": true,
             "htmlEscape": false,
@@ -1032,10 +1417,94 @@
             "identifier": null,
             "unique": false,
             "recommend": false,
-            "uuid": "e0f7e1e9-291a-4ea1-93e1-ec8242639082",
-            "displayName": "{{ assignmentGroup }}",
+            "uuid": "43a72d7a-484a-496e-808e-be3473f68663",
+            "displayName": "{{ sIRCategory }}",
             "descriptions": {
-                "singular": "Assignment Group"
+                "singular": "SIR Category"
+            }
+        },
+        {
+            "@id": "\/api\/3\/attribute_metadatas\/cf6e7523-345f-428e-90de-d2e5da489606",
+            "@type": "AttributeMetadata",
+            "type": "indicators",
+            "name": "indicators",
+            "length": null,
+            "orderIndex": 3,
+            "formType": "manyToMany",
+            "dataSource": {
+                "model": "indicators"
+            },
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": true,
+            "inversedField": "securityIncidents",
+            "ownsRelationship": true,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761
+            },
+            "bulkAction": [],
+            "dataSourceFilters": null,
+            "defaultValue": null,
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "uuid": "cf6e7523-345f-428e-90de-d2e5da489606",
+            "displayName": "{{ indicators }}",
+            "descriptions": {
+                "singular": "Indicators"
+            }
+        },
+        {
+            "@id": "\/api\/3\/attribute_metadatas\/cd273505-6e19-435c-8cb9-e9bfa939bd36",
+            "@type": "AttributeMetadata",
+            "type": "tasks",
+            "name": "tasks",
+            "length": null,
+            "orderIndex": 2,
+            "formType": "manyToMany",
+            "dataSource": {
+                "model": "tasks"
+            },
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": true,
+            "inversedField": "securityIncidents",
+            "ownsRelationship": true,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761
+            },
+            "bulkAction": [],
+            "dataSourceFilters": null,
+            "defaultValue": null,
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "uuid": "cd273505-6e19-435c-8cb9-e9bfa939bd36",
+            "displayName": "{{ tasks }}",
+            "descriptions": {
+                "singular": "Tasks"
             }
         },
         {
@@ -1044,7 +1513,7 @@
             "type": "picklists",
             "name": "phase",
             "length": null,
-            "orderIndex": 6,
+            "orderIndex": 14,
             "formType": "picklist",
             "dataSource": {
                 "model": "picklists",
@@ -1130,6 +1599,48 @@
             "descriptions": {
                 "singular": "Phase"
             }
+        },
+        {
+            "@id": "\/api\/3\/attribute_metadatas\/d7a198b7-c151-4cb3-a025-88d4a62d60b4",
+            "@type": "AttributeMetadata",
+            "type": "attachments",
+            "name": "attachments",
+            "length": null,
+            "orderIndex": 1,
+            "formType": "manyToMany",
+            "dataSource": {
+                "model": "attachments"
+            },
+            "searchable": false,
+            "peerReplicable": true,
+            "system": false,
+            "encrypted": false,
+            "gridColumn": false,
+            "collection": true,
+            "inversedField": "securityIncidents",
+            "ownsRelationship": true,
+            "validation": {
+                "required": false,
+                "minlength": 0,
+                "maxlength": 10485761
+            },
+            "bulkAction": [],
+            "dataSourceFilters": null,
+            "defaultValue": null,
+            "tooltip": null,
+            "visibility": true,
+            "htmlEscape": false,
+            "orphanRemoval": null,
+            "readable": true,
+            "writeable": true,
+            "identifier": null,
+            "unique": false,
+            "recommend": false,
+            "uuid": "d7a198b7-c151-4cb3-a025-88d4a62d60b4",
+            "displayName": "{{ attachments }}",
+            "descriptions": {
+                "singular": "Attachments"
+            }
         }
     ],
     "system": false,
@@ -1143,7 +1654,7 @@
         "delete_primary_data_after": 60
     },
     "archivalFilters": [],
-    "uuid": "924aa7cd-91c5-459f-8820-86ef9e7d0dae",
+    "uuid": "6802a580-7574-4b38-93fd-f53fc317c910",
     "displayName": "{{ name }}",
     "descriptions": {
         "plural": "Security Incidents",
