@@ -1,0 +1,89 @@
+{
+    "name": "serviceNowSecurityIncidentResponseIntegration",
+    "version": "1.0.0",
+    "type": "solutionpack",
+    "local": true,
+    "label": "ServiceNow Security Incident Response Integration",
+    "dependencies": [
+        {
+            "name": "sOARFramework",
+            "type": "solutionpack",
+            "label": "SOAR Framework",
+            "version": "1.1.0",
+            "minVersion": null
+        }
+    ],
+    "prerequisite": null,
+    "publisher": "Fortinet",
+    "certified": true,
+    "description": "With the ServiceNow Security Incident Response (SIR) module integration Solution pack for FortiSOAR , users can manage the life cycle of your security incidents from initial analysis to containment, eradication, and recovery. Security Incident Response enables you to get a comprehensive understanding of incident response procedures performed by your analysts, and understand trends and bottlenecks in those procedures with analytic-driven dashboards and reporting.",
+    "help": "https://github.com/fortinet-fortisoar/solution-pack-servicenow-security-incident-response-integration/blob/release/1.0.0/README.md",
+    "category": [
+        "IT Service Management"
+    ],
+    "supportInfo": "Fortinet Customer Support",
+    "iconLarge": null,
+    "recordTags": [
+        "ServiceNow"
+    ],
+    "fsrMinCompatibility": "7.2.0",
+    "date": "2022-09-06T12:26:16+00:00",
+    "contents": {
+        "picklistNames": [
+            {
+                "name": "IncidentPhase"
+            },
+            {
+                "name": "IncidentStatus"
+            },
+            {
+                "name": "IncidentType"
+            },
+            {
+                "name": "Severity"
+            },
+            {
+                "name": "SIRCategory"
+            },
+            {
+                "name": "SIRImpact"
+            },
+            {
+                "name": "SIRPriority"
+            }
+        ],
+        "modules": {
+            "security_incidents": {
+                "name": "Security Incidents",
+                "apiName": "security_incidents"
+            }
+        },
+        "viewTemplates": {
+            "security_incidents": {
+                "name": "Security Incidents",
+                "apiName": "security_incidents",
+                "views": [
+                    "list",
+                    "detail",
+                    "form"
+                ]
+            }
+        },
+        "views": {
+            "navigation": [
+                "Incident Response"
+            ]
+        },
+        "roles": [
+            {
+                "name": "Full App Permissions"
+            }
+        ],
+        "connectors": [
+            {
+                "name": "ServiceNow",
+                "apiName": "servicenow"
+            }
+        ]
+    }
+}

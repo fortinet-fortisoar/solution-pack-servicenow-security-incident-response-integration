@@ -1,0 +1,163 @@
+{
+    "@context": "\/api\/3\/contexts\/SystemViewTemplate",
+    "@type": "SystemViewTemplate",
+    "type": "form",
+    "config": {
+        "rows": [
+            {
+                "columns": [
+                    {
+                        "widgets": [
+                            {
+                                "type": "formGroup",
+                                "config": {
+                                    "wid": "4bc57726-741a-4be5-b712-ac9f6660d649",
+                                    "rows": [
+                                        {
+                                            "columns": [
+                                                {
+                                                    "fields": [
+                                                        {
+                                                            "name": "name",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "formGroup",
+                                "config": {
+                                    "wid": "2c50d4c0-515c-4ea1-8f22-a7463cb3ca79",
+                                    "rows": [
+                                        {
+                                            "columns": [
+                                                {
+                                                    "fields": [
+                                                        {
+                                                            "name": "description",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "type": "formGroup",
+                                "config": {
+                                    "wid": "0f0ed138-526e-4f68-8b18-1d35749bd6e7",
+                                    "rows": [
+                                        {
+                                            "columns": [
+                                                {
+                                                    "fields": [
+                                                        {
+                                                            "name": "phase",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "status",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "title": "Summary"
+                                }
+                            },
+                            {
+                                "type": "formGroup",
+                                "config": {
+                                    "wid": "84929490-2806-4f63-839d-0612c9acac15",
+                                    "rows": [
+                                        {
+                                            "columns": [
+                                                {
+                                                    "fields": [
+                                                        {
+                                                            "name": "severity",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "type",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "source",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "sourceID",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "riskScore",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "sIRCategory",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "sIRPriority",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "sIRImpact",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "incidentLead",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        },
+                                                        {
+                                                            "name": "recordTags",
+                                                            "highlightMode": true,
+                                                            "readOnly": false
+                                                        }
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "title": "Details"
+                                }
+                            }
+                        ],
+                        "style": "col-lg-12"
+                    }
+                ],
+                "wid": "5d470ae3-96f2-4c24-b949-f27a4df92df9",
+                "_collapsed": false
+            }
+        ],
+        "wid": "8a1e0de5-8e3a-4245-94d4-bf8a03dd7b4e",
+        "metadata": {
+            "customTemplateTitle": "Security Incidents",
+            "originalTemplateTitle": "Security Incidents"
+        },
+        "style": "col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1"
+    },
+    "uuid": "modules-security_incidents-form"
+}

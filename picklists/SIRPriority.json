@@ -1,0 +1,60 @@
+{
+    "@context": "\/api\/3\/contexts\/PicklistName",
+    "@id": "\/api\/3\/picklist_names\/b7c3abf8-1fea-4943-b7b9-fc2abd0cfaf8",
+    "@type": "PicklistName",
+    "name": "SIRPriority",
+    "system": false,
+    "picklists": [
+        {
+            "@id": "\/api\/3\/picklists\/79bd6bda-a110-4aaf-b89b-69634f4a4162",
+            "@type": "Picklist",
+            "itemValue": "Moderate",
+            "orderIndex": 2,
+            "color": "#e1c846",
+            "icon": null,
+            "listName": "\/api\/3\/picklist_names\/b7c3abf8-1fea-4943-b7b9-fc2abd0cfaf8",
+            "uuid": "79bd6bda-a110-4aaf-b89b-69634f4a4162"
+        },
+        {
+            "@id": "\/api\/3\/picklists\/cc231cc2-514b-410c-ab5d-d6a6c5a73ac4",
+            "@type": "Picklist",
+            "itemValue": "Low",
+            "orderIndex": 3,
+            "color": "#88c820",
+            "icon": null,
+            "listName": "\/api\/3\/picklist_names\/b7c3abf8-1fea-4943-b7b9-fc2abd0cfaf8",
+            "uuid": "cc231cc2-514b-410c-ab5d-d6a6c5a73ac4"
+        },
+        {
+            "@id": "\/api\/3\/picklists\/92427170-84eb-446f-8736-5a29815c6cc0",
+            "@type": "Picklist",
+            "itemValue": "Planning",
+            "orderIndex": 4,
+            "color": "#5ebb6e",
+            "icon": null,
+            "listName": "\/api\/3\/picklist_names\/b7c3abf8-1fea-4943-b7b9-fc2abd0cfaf8",
+            "uuid": "92427170-84eb-446f-8736-5a29815c6cc0"
+        },
+        {
+            "@id": "\/api\/3\/picklists\/d350a47e-5367-4668-b2f7-f79bc7ed830e",
+            "@type": "Picklist",
+            "itemValue": "Critical",
+            "orderIndex": 0,
+            "color": "#ab0e0e",
+            "icon": null,
+            "listName": "\/api\/3\/picklist_names\/b7c3abf8-1fea-4943-b7b9-fc2abd0cfaf8",
+            "uuid": "d350a47e-5367-4668-b2f7-f79bc7ed830e"
+        },
+        {
+            "@id": "\/api\/3\/picklists\/e2b53c57-d58f-4b1e-8677-de3312cbd80f",
+            "@type": "Picklist",
+            "itemValue": "High",
+            "orderIndex": 1,
+            "color": "#df5c12",
+            "icon": null,
+            "listName": "\/api\/3\/picklist_names\/b7c3abf8-1fea-4943-b7b9-fc2abd0cfaf8",
+            "uuid": "e2b53c57-d58f-4b1e-8677-de3312cbd80f"
+        }
+    ],
+    "uuid": "b7c3abf8-1fea-4943-b7b9-fc2abd0cfaf8"
+}
